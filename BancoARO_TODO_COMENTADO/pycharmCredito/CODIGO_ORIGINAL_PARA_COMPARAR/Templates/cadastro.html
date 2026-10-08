@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Define a codificação dos caracteres da página -->
+    <meta charset="UTF-8">
+
+    <!-- Faz a página se adaptar a celulares e tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece na aba do navegador -->
+    <title>Criar conta</title>
+
+    <!-- Conecta o arquivo CSS externo -->
+    <link rel="stylesheet" href="static/css/cadastro.css">
+</head>
+
+<body>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+                   {% if messages %}
+            <div class="flash-messages">
+                           {% for category, message in messages %}
+            <div class="flash {{ category }}">{{ message }}</div>
+                           {% endfor %}
+            </div>
+                   {% endif %}
+               {% endwith %}
+
+    <!-- =====================================================
+         CONTAINER PRINCIPAL
+         ===================================================== -->
+
+    <!-- Área que contém todo o formulário -->
+    <main class="pagina">
+
+        <!-- =================================================
+             CARD DO FORMULÁRIO
+             ================================================= -->
+
+        <section class="card">
+
+            <!-- Ícone de criação de usuário -->
+            <div class="icone-conta">
+                <span>👤</span>
+                <strong>+</strong>
+            </div>
+
+            <!-- Título principal -->
+            <h1>Criar conta</h1>
+
+            <!-- Texto de apresentação -->
+            <p class="descricao">
+                Preencha seus dados para calibrar sua
+                capacidade de pagamento com precisão analítica.
+            </p>
+
+
+            <!-- =================================================
+                 FORMULÁRIO
+                 ================================================= -->
+
+            {% with mensagens = get_flashed_messages() %}{% if mensagens %}<div class="mensagens">{% for mensagem in mensagens %}<p>{{ mensagem }}</p>{% endfor %}</div>{% endif %}{% endwith %}
+            <form action="{{ url_for('cadastro') }}" method="POST">
+
+                <!-- Campo para nome completo -->
+                <div class="campo">
+
+                    <!-- Texto que identifica o campo -->
+                    <label for="nome">Nome completo</label>
+
+                    <!-- Campo de entrada do nome -->
+                    <input type="text" id="nome" name="nome" placeholder="Ex: Carlos Eduardo Silveira" required>
+
+                </div>
+
+
+                <!-- Campo para e-mail -->
+                <div class="campo">
+
+                    <!-- Texto que identifica o campo -->
+                    <label for="email">E-mail corporativo ou pessoal</label>
+
+                    <!-- Campo de entrada do e-mail -->
+                    <input type="email" id="email" name="email" placeholder="carlos@exemplo.com.br" required>
+
+                </div>
+
+
+                <!-- Campo para senha -->
+                <div class="campo">
+
+                    <!-- Texto que identifica o campo -->
+                    <label for="senha">Senha de acesso</label>
+
+                    <!-- Campo de senha -->
+                    <input type="password" id="senha" name="senha" placeholder="••••••••••••" required>
+
+                </div>
+
+
+                <!-- =================================================
+                     SEPARADOR
+                     ================================================= -->
+
+                <!-- Linha visual que separa os dados pessoais
+                     dos dados financeiros -->
+                <div class="separador"></div>
+
+
+                <!-- =================================================
+                     PARÂMETROS FINANCEIROS
+                     ================================================= -->
+
+                <!-- Título da seção financeira -->
+                <h2>PARÂMETROS FINANCEIROS INICIAIS</h2>
+
+
+                <!-- Campo de renda mensal -->
+                <div class="campo">
+
+                    <!-- Identificação do campo -->
+                    <label for="renda">Renda mensal líquida</label>
+
+                    <!-- Campo para informar a renda -->
+                    <input type="text" id="renda" name="renda" placeholder="R$ 0,00" required>
+
+                </div>
+
+
+                <!-- Campo de despesas -->
+                <div class="campo">
+
+                    <!-- Identificação do campo -->
+                    <label for="despesas">Despesas fixas mês</label>
+
+                    <!-- Campo para informar as despesas -->
+                    <input type="text" id="despesas" name="despesas" placeholder="R$ 0,00" required>
+
+                </div>
+
+
+                <!-- =================================================
+                     AVISO DE SEGURANÇA E LGPD
+                     ================================================= -->
+
+                <!-- Caixa contendo a mensagem de proteção dos dados -->
+                <div class="aviso-seguranca">
+
+                    <p>
+                        Seus dados estão protegidos de acordo
+                        com as normas da LGPD e utilizados
+                        unicamente para análise de risco
+                        ponderado.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                     BOTÃO DE CADASTRO
+                     ================================================= -->
+
+                <!-- Botão responsável pelo envio do formulário -->
+                <button type="submit" class="botao-cadastrar">Cadastrar &gt;</button>
+
+            </form>
+
+        </section>
+
+
+        <!-- =====================================================
+             RODAPÉ
+             ===================================================== -->
+
+        <footer>
+
+            <!-- Informação sobre criptografia -->
+            <span>
+                Criptografia ponta a<br>
+                ponta
+            </span>
+
+            <!-- Identificação do banco -->
+            <span>
+                Banco Central do Brasil
+            </span>
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

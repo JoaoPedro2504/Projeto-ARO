@@ -1,0 +1,9 @@
+BANCO ARO - CÓDIGO COMENTADO EM LINGUAGEM SIMPLES
+
+1. Comece por pycharmCredito/main.py, que é onde ficam as rotas do Flask.
+2. Nos arquivos .py, .html e .css, foram adicionados comentários dentro do próprio código onde isso é seguro.
+3. A pasta EXPLICACOES_LINHA_POR_LINHA tem um .txt para CADA arquivo e explica absolutamente todas as linhas originais, até as vazias.
+4. Para entender margin e padding, veja os CSS e os .txt correspondentes.
+5. Os arquivos originais sem os comentários novos ficam na pasta CODIGO_ORIGINAL_PARA_COMPARAR.
+6. O arquivo BANCO.FDB é binário: não dá para comentar suas linhas como texto. Ele foi preservado sem modificação.
+7. A ideia foi comentar SEM mudar a lógica das rotas ou o layout.

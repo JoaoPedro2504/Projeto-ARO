@@ -1,0 +1,980 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+/* =========================================================
+   RESET GERAL
+   ========================================================= */
+
+/*
+   O * seleciona todos os elementos da página.
+*/
+
+* {
+
+    /* Remove margens padrão */
+    /* É o espaço de fora da caixa, para afastar dos outros elementos. Aqui foi colocado 0. Se mudar esse valor, muda esse detalhe na tela. */
+    margin: 0;
+
+    /* Remove espaçamentos internos padrão */
+    /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 0. Se mudar esse valor, muda esse detalhe na tela. */
+    padding: 0;
+
+    /*
+       Faz width e height considerarem
+       também padding e borda.
+    */
+    /* Controla como largura, borda e padding entram no cálculo. Aqui foi colocado border-box. Se mudar esse valor, muda esse detalhe na tela. */
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+
+    /*
+       Define a fonte utilizada em toda a página.
+    */
+    /* Escolhe a fonte das letras. Aqui foi colocado 'Inter', sans-serif. Se mudar esse valor, muda esse detalhe na tela. */
+    font-family: 'Inter', sans-serif;
+
+    /*
+       Cor de fundo da página.
+    */
+    /* É a cor do fundo. Aqui foi colocado #faf9f8. Se mudar esse valor, muda esse detalhe na tela. */
+    background-color: #faf9f8;
+
+    /*
+       Cor padrão dos textos.
+    */
+    /* É a cor do texto. Aqui foi colocado #25232a. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #25232a;
+
+    /*
+       Faz o body ocupar no mínimo
+       toda a altura da tela.
+    */
+    /* Define a altura mínima. Aqui foi colocado 100vh. Se mudar esse valor, muda esse detalhe na tela. */
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   PÁGINA PRINCIPAL
+   ========================================================= */
+
+/*
+   Esse elemento contém:
+   - logo
+   - card de login
+*/
+
+.pagina-login {
+
+    /*
+       Ocupa toda a largura da tela.
+    */
+    /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 100%;
+
+    /*
+       Ocupa toda a altura da tela.
+    */
+    /* Define a altura mínima. Aqui foi colocado 100vh. Se mudar esse valor, muda esse detalhe na tela. */
+    min-height: 100vh;
+
+    /*
+       Ativa o Flexbox.
+    */
+    /* Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado flex. Se mudar esse valor, muda esse detalhe na tela. */
+    display: flex;
+
+    /*
+       Centraliza os elementos verticalmente.
+    */
+    /* Alinha os itens no outro eixo. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    align-items: center;
+
+    /*
+       Centraliza o conjunto horizontalmente.
+    */
+    /* Organiza os itens no eixo principal, tipo centralizar ou separar. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    justify-content: center;
+
+    /*
+       Cria espaço entre o logo e o card.
+    */
+    /* É a distância entre os elementos. Aqui foi colocado 80px. Se mudar esse valor, muda esse detalhe na tela. */
+    gap: 80px;
+
+    /*
+       Cria espaço interno nas laterais.
+    */
+    /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 40px. Se mudar esse valor, muda esse detalhe na tela. */
+    padding: 40px;
+}
+
+
+/* =========================================================
+   ÁREA DO LOGO
+   ========================================================= */
+
+/*
+   Define a área onde o logo ARO ficará.
+*/
+
+.area-logo {
+
+    /*
+       Define uma largura para a área do logo.
+    */
+    /* É a largura. Aqui foi colocado 240px. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 240px;
+
+    /*
+       Centraliza o logo dentro da área.
+    */
+    /* Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado flex. Se mudar esse valor, muda esse detalhe na tela. */
+    display: flex;
+
+    /* Alinha os itens no outro eixo. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    align-items: center;
+
+    /* Organiza os itens no eixo principal, tipo centralizar ou separar. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    justify-content: center;
+}
+
+
+/* =========================================================
+   LOGO ARO
+   ========================================================= */
+
+.logo-aro {
+
+    /*
+       Define a largura máxima do logo.
+    */
+    /* É a largura. Aqui foi colocado 170px. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 170px;
+
+    /*
+       Impede que a imagem fique maior
+       que o tamanho definido.
+    */
+    /* Limita até onde a largura pode crescer. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    max-width: 100%;
+
+    /*
+       Faz a altura ser calculada
+       proporcionalmente à largura.
+    */
+    /* É a altura. Aqui foi colocado auto. Se mudar esse valor, muda esse detalhe na tela. */
+    height: auto;
+
+    /*
+       Impede que a imagem fique esticada.
+    */
+    /* Define como uma imagem ocupa a área dela. Aqui foi colocado contain. Se mudar esse valor, muda esse detalhe na tela. */
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   ÁREA DO LOGIN
+   ========================================================= */
+
+.area-login {
+
+    /*
+       Define a largura da área de login.
+    */
+    /* É a largura. Aqui foi colocado 550px. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 550px;
+
+    /*
+       Impede que ela fique maior
+       que o tamanho definido.
+    */
+    /* Limita até onde a largura pode crescer. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   CARD DE LOGIN
+   ========================================================= */
+
+/*
+   Caixa branca que contém os campos
+   e o botão de login.
+*/
+
+.card-login {
+
+    /*
+       Ocupa toda a largura da área.
+    */
+    /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 100%;
+
+    /*
+       Define a altura aproximada do card
+       apresentado na imagem.
+    */
+    /* Define a altura mínima. Aqui foi colocado 430px. Se mudar esse valor, muda esse detalhe na tela. */
+    min-height: 430px;
+
+    /*
+       Fundo branco.
+    */
+    /* É a cor do fundo. Aqui foi colocado #ffffff. Se mudar esse valor, muda esse detalhe na tela. */
+    background-color: #ffffff;
+
+    /*
+       Espaçamento interno.
+
+       30px cima
+       30px direita
+       40px baixo
+       30px esquerda
+    */
+    /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 30px. Se mudar esse valor, muda esse detalhe na tela. */
+    padding: 30px;
+
+    /*
+       Arredonda os cantos.
+    */
+    /* Arredonda os cantos. Aqui foi colocado 14px. Se mudar esse valor, muda esse detalhe na tela. */
+    border-radius: 14px;
+
+    /*
+       Cria a sombra suave do card.
+    */
+    /* Adiciona uma sombra. Aqui foi colocado 0 8px 30px rgba(0, 0, 0, 0.06). Se mudar esse valor, muda esse detalhe na tela. */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+
+    /*
+       Mantém o card centralizado.
+    */
+    /* Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado flex. Se mudar esse valor, muda esse detalhe na tela. */
+    display: flex;
+
+    /* Define se os itens flex ficam em linha ou coluna. Aqui foi colocado column. Se mudar esse valor, muda esse detalhe na tela. */
+    flex-direction: column;
+
+    /* Organiza os itens no eixo principal, tipo centralizar ou separar. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    justify-content: center;
+}
+
+
+/* =========================================================
+   CABEÇALHO DO LOGIN
+   ========================================================= */
+
+.cabecalho-login {
+
+    /*
+       Centraliza título e descrição.
+    */
+    /* Alinha o texto. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    text-align: center;
+
+    /*
+       Cria espaço abaixo do cabeçalho.
+    */
+    /* Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 45px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-bottom: 45px;
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.cabecalho-login h1 {
+
+    /*
+       Cor roxa utilizada na identidade visual.
+    */
+    /* É a cor do texto. Aqui foi colocado #604092. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #604092;
+
+    /*
+       Tamanho do título.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 20px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 20px;
+
+    /*
+       Deixa o título em negrito.
+    */
+    /* Controla se a letra fica normal ou mais grossa. Aqui foi colocado 700. Se mudar esse valor, muda esse detalhe na tela. */
+    font-weight: 700;
+
+    /*
+       Cria espaço abaixo do título.
+    */
+    /* Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 8px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   DESCRIÇÃO
+   ========================================================= */
+
+.cabecalho-login p {
+
+    /*
+       Cor cinza do texto.
+    */
+    /* É a cor do texto. Aqui foi colocado #89838d. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #89838d;
+
+    /*
+       Tamanho pequeno.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 9px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 9px;
+
+    /*
+       Espaçamento entre linhas.
+    */
+    /* É a altura de cada linha de texto. Aqui foi colocado 1.5. Se mudar esse valor, muda esse detalhe na tela. */
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+.form-login {
+
+    /*
+       Faz o formulário ocupar toda
+       a largura do card.
+    */
+    /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 100%;
+}
+
+
+/* =========================================================
+   CAMPO
+   ========================================================= */
+
+.campo {
+
+    /*
+       Cria espaço entre os campos.
+    */
+    /* Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 18px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.campo label {
+
+    /*
+       Faz o label ocupar uma linha.
+    */
+    /* Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado block. Se mudar esse valor, muda esse detalhe na tela. */
+    display: block;
+
+    /*
+       Cor do texto.
+    */
+    /* É a cor do texto. Aqui foi colocado #303030. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #303030;
+
+    /*
+       Tamanho da fonte.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 8px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 8px;
+
+    /*
+       Deixa o texto em negrito.
+    */
+    /* Controla se a letra fica normal ou mais grossa. Aqui foi colocado 700. Se mudar esse valor, muda esse detalhe na tela. */
+    font-weight: 700;
+
+    /*
+       Espaço entre label e input.
+    */
+    /* Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 7px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-bottom: 7px;
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.campo input {
+
+    /*
+       Ocupa toda a largura disponível.
+    */
+    /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 100%;
+
+    /*
+       Altura do campo.
+    */
+    /* É a altura. Aqui foi colocado 35px. Se mudar esse valor, muda esse detalhe na tela. */
+    height: 35px;
+
+    /*
+       Remove a borda padrão.
+    */
+    /* É a borda ao redor do elemento. Aqui foi colocado none. Se mudar esse valor, muda esse detalhe na tela. */
+    border: none;
+
+    /*
+       Arredonda os cantos.
+    */
+    /* Arredonda os cantos. Aqui foi colocado 6px. Se mudar esse valor, muda esse detalhe na tela. */
+    border-radius: 6px;
+
+    /*
+       Fundo cinza claro.
+    */
+    /* É a cor do fundo. Aqui foi colocado #f0eeee. Se mudar esse valor, muda esse detalhe na tela. */
+    background-color: #f0eeee;
+
+    /*
+       Espaçamento interno lateral.
+    */
+    /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 0 12px. Se mudar esse valor, muda esse detalhe na tela. */
+    padding: 0 12px;
+
+    /*
+       Fonte utilizada dentro do campo.
+    */
+    /* Escolhe a fonte das letras. Aqui foi colocado 'Inter', sans-serif. Se mudar esse valor, muda esse detalhe na tela. */
+    font-family: 'Inter', sans-serif;
+
+    /*
+       Tamanho do texto.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 9px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 9px;
+
+    /*
+       Cor do texto digitado.
+    */
+    /* É a cor do texto. Aqui foi colocado #444. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #444;
+
+    /*
+       Remove o contorno padrão.
+    */
+    /* É uma linha de destaque em volta do elemento. Aqui foi colocado none. Se mudar esse valor, muda esse detalhe na tela. */
+    outline: none;
+
+    /*
+       Suaviza alterações de aparência.
+    */
+    /* Faz mudanças de estilo acontecerem suavemente. Aqui foi colocado 0.2s ease. Se mudar esse valor, muda esse detalhe na tela. */
+    transition: 0.2s ease;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.campo input::placeholder {
+
+    /*
+       Cor do texto de exemplo.
+    */
+    /* É a cor do texto. Aqui foi colocado #99939d. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #99939d;
+
+    /*
+       Mantém o placeholder visível.
+    */
+    /* Controla a transparência. Aqui foi colocado 1. Se mudar esse valor, muda esse detalhe na tela. */
+    opacity: 1;
+}
+
+
+/* =========================================================
+   INPUT QUANDO SELECIONADO
+   ========================================================= */
+
+.campo input:focus {
+
+    /*
+       Mantém o fundo claro.
+    */
+    /* É a cor do fundo. Aqui foi colocado #eeecec. Se mudar esse valor, muda esse detalhe na tela. */
+    background-color: #eeecec;
+
+    /*
+       Cria uma pequena borda roxa.
+    */
+    /* É uma linha de destaque em volta do elemento. Aqui foi colocado 1px solid #70439b. Se mudar esse valor, muda esse detalhe na tela. */
+    outline: 1px solid #70439b;
+}
+
+
+/* =========================================================
+   MENSAGENS DO FLASK
+   ========================================================= */
+
+.mensagens {
+
+    /*
+       Cria espaço abaixo da mensagem.
+    */
+    /* É o espaço de fora da caixa, para afastar dos outros elementos. Aqui foi colocado 5px 0 15px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin: 5px 0 15px;
+
+    /*
+       Centraliza o texto.
+    */
+    /* Alinha o texto. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    text-align: center;
+}
+
+
+/* Texto da mensagem */
+
+.mensagens p {
+
+    /*
+       Cor da mensagem.
+    */
+    /* É a cor do texto. Aqui foi colocado #b33a3a. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #b33a3a;
+
+    /*
+       Tamanho do texto.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 8px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   BOTÃO DE LOGIN
+   ========================================================= */
+
+.botao-login {
+
+    /*
+       Ocupa toda a largura do formulário.
+    */
+    /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 100%;
+
+    /*
+       Define a altura do botão.
+    */
+    /* É a altura. Aqui foi colocado 38px. Se mudar esse valor, muda esse detalhe na tela. */
+    height: 38px;
+
+    /*
+       Remove a borda.
+    */
+    /* É a borda ao redor do elemento. Aqui foi colocado none. Se mudar esse valor, muda esse detalhe na tela. */
+    border: none;
+
+    /*
+       Arredonda os cantos.
+    */
+    /* Arredonda os cantos. Aqui foi colocado 6px. Se mudar esse valor, muda esse detalhe na tela. */
+    border-radius: 6px;
+
+    /*
+       Define a cor roxa do botão.
+    */
+    /* É a cor do fundo. Aqui foi colocado #63409a. Se mudar esse valor, muda esse detalhe na tela. */
+    background-color: #63409a;
+
+    /*
+       Cor branca do texto.
+    */
+    /* É a cor do texto. Aqui foi colocado #ffffff. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #ffffff;
+
+    /*
+       Fonte do botão.
+    */
+    /* Escolhe a fonte das letras. Aqui foi colocado 'Inter', sans-serif. Se mudar esse valor, muda esse detalhe na tela. */
+    font-family: 'Inter', sans-serif;
+
+    /*
+       Tamanho do texto.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 9px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 9px;
+
+    /*
+       Deixa o texto em negrito.
+    */
+    /* Controla se a letra fica normal ou mais grossa. Aqui foi colocado 700. Se mudar esse valor, muda esse detalhe na tela. */
+    font-weight: 700;
+
+    /*
+       Faz o cursor virar uma mão.
+    */
+    /* Muda o desenho do cursor ao passar em cima. Aqui foi colocado pointer. Se mudar esse valor, muda esse detalhe na tela. */
+    cursor: pointer;
+
+    /*
+       Cria uma pequena sombra.
+    */
+    /* Adiciona uma sombra. Aqui foi colocado 0 4px 8px rgba(99, 64, 154, 0.18). Se mudar esse valor, muda esse detalhe na tela. */
+    box-shadow: 0 4px 8px rgba(99, 64, 154, 0.18);
+
+    /*
+       Suaviza o efeito hover.
+    */
+    /* Faz mudanças de estilo acontecerem suavemente. Aqui foi colocado 0.2s ease. Se mudar esse valor, muda esse detalhe na tela. */
+    transition: 0.2s ease;
+}
+
+
+/* =========================================================
+   HOVER DO BOTÃO
+   ========================================================= */
+
+.botao-login:hover {
+
+    /*
+       Escurece um pouco o roxo.
+    */
+    /* É a cor do fundo. Aqui foi colocado #543487. Se mudar esse valor, muda esse detalhe na tela. */
+    background-color: #543487;
+
+    /*
+       Move o botão levemente para cima.
+    */
+    /* Move, gira ou aumenta um elemento visualmente. Aqui foi colocado translateY(-1px). Se mudar esse valor, muda esse detalhe na tela. */
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ÁREA "CRIAR CONTA"
+   ========================================================= */
+
+.criar-conta {
+
+    /*
+       Centraliza os textos.
+    */
+    /* Alinha o texto. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    text-align: center;
+
+    /*
+       Espaço acima da área.
+    */
+    /* Controla a propriedade margin-top desse elemento. Aqui foi colocado 28px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-top: 28px;
+}
+
+
+/* Texto "Ainda não possui..." */
+
+.criar-conta p {
+
+    /*
+       Cor cinza.
+    */
+    /* É a cor do texto. Aqui foi colocado #99939d. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #99939d;
+
+    /*
+       Tamanho pequeno.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 8px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 8px;
+
+    /*
+       Espaço abaixo do texto.
+    */
+    /* Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 8px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   LINK "CRIAR UMA CONTA"
+   ========================================================= */
+
+.criar-conta a {
+
+    /*
+       Cor roxa.
+    */
+    /* É a cor do texto. Aqui foi colocado #63409a. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #63409a;
+
+    /*
+       Deixa o link em negrito.
+    */
+    /* Controla se a letra fica normal ou mais grossa. Aqui foi colocado 700. Se mudar esse valor, muda esse detalhe na tela. */
+    font-weight: 700;
+
+    /*
+       Remove o sublinhado.
+    */
+    /* Coloca ou tira decoração do texto, como sublinhado. Aqui foi colocado none. Se mudar esse valor, muda esse detalhe na tela. */
+    text-decoration: none;
+
+    /*
+       Tamanho do texto.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 9px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 9px;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.criar-conta a:hover {
+
+    /*
+       Adiciona sublinhado.
+    */
+    /* Coloca ou tira decoração do texto, como sublinhado. Aqui foi colocado underline. Se mudar esse valor, muda esse detalhe na tela. */
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   AVISO DE SEGURANÇA
+   ========================================================= */
+
+.seguranca {
+
+    /*
+       Centraliza o conteúdo.
+    */
+    /* Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado flex. Se mudar esse valor, muda esse detalhe na tela. */
+    display: flex;
+
+    /*
+       Centraliza verticalmente.
+    */
+    /* Alinha os itens no outro eixo. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    align-items: center;
+
+    /*
+       Centraliza horizontalmente.
+    */
+    /* Organiza os itens no eixo principal, tipo centralizar ou separar. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    justify-content: center;
+
+    /*
+       Cria espaço acima.
+    */
+    /* Controla a propriedade margin-top desse elemento. Aqui foi colocado 12px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-top: 12px;
+
+    /*
+       Cor do texto.
+    */
+    /* É a cor do texto. Aqui foi colocado #99939d. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #99939d;
+
+    /*
+       Tamanho da fonte.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 7px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 7px;
+}
+
+
+/* =========================================================
+   ÍCONE DE CADEADO
+   ========================================================= */
+
+.cadeado {
+
+    /*
+       Cria espaço entre o ícone e o texto.
+    */
+    /* Controla a propriedade margin-right desse elemento. Aqui foi colocado 6px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-right: 6px;
+
+    /*
+       Define o tamanho do ícone.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 10px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 10px;
+
+    /*
+       Define a cor.
+    */
+    /* É a cor do texto. Aqui foi colocado #77717d. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #77717d;
+}
+
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+/*
+   Quando a tela tiver até 900px,
+   reduzimos o espaço entre logo e login.
+*/
+
+@media (max-width: 900px) {
+
+    .pagina-login {
+
+        /*
+           Reduz o espaço entre os elementos.
+        */
+        /* É a distância entre os elementos. Aqui foi colocado 40px. Se mudar esse valor, muda esse detalhe na tela. */
+        gap: 40px;
+
+        /*
+           Reduz o padding.
+        */
+        /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 30px. Se mudar esse valor, muda esse detalhe na tela. */
+        padding: 30px;
+    }
+
+    /*
+       Diminui o tamanho do logo.
+    */
+    .logo-aro {
+        /* É a largura. Aqui foi colocado 140px. Se mudar esse valor, muda esse detalhe na tela. */
+        width: 140px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES
+   ========================================================= */
+
+/*
+   Quando a tela tiver até 700px,
+   logo e login passam a ficar um
+   abaixo do outro.
+*/
+
+@media (max-width: 700px) {
+
+    .pagina-login {
+
+        /*
+           Muda a direção para vertical.
+        */
+        /* Define se os itens flex ficam em linha ou coluna. Aqui foi colocado column. Se mudar esse valor, muda esse detalhe na tela. */
+        flex-direction: column;
+
+        /*
+           Diminui o espaço entre os elementos.
+        */
+        /* É a distância entre os elementos. Aqui foi colocado 25px. Se mudar esse valor, muda esse detalhe na tela. */
+        gap: 25px;
+
+        /*
+           Permite rolagem caso necessário.
+        */
+        /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 30px 20px. Se mudar esse valor, muda esse detalhe na tela. */
+        padding: 30px 20px;
+    }
+
+
+    /*
+       Área do logo ocupa toda a largura.
+    */
+    .area-logo {
+        /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+        width: 100%;
+    }
+
+
+    /*
+       Logo fica menor no celular.
+    */
+    .logo-aro {
+        /* É a largura. Aqui foi colocado 120px. Se mudar esse valor, muda esse detalhe na tela. */
+        width: 120px;
+    }
+
+
+    /*
+       Área do login ocupa toda a largura.
+    */
+    .area-login {
+        /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+        width: 100%;
+    }
+
+
+    /*
+       Card fica um pouco menor.
+    */
+    .card-login {
+        /* Define a altura mínima. Aqui foi colocado auto. Se mudar esse valor, muda esse detalhe na tela. */
+        min-height: auto;
+
+        /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 30px 22px. Se mudar esse valor, muda esse detalhe na tela. */
+        padding: 30px 22px;
+    }
+
+
+    /*
+       Reduz o espaço abaixo do cabeçalho.
+    */
+    .cabecalho-login {
+        /* Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 30px. Se mudar esse valor, muda esse detalhe na tela. */
+        margin-bottom: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    /*
+       Reduz o padding do card.
+    */
+    .card-login {
+        /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 25px 18px. Se mudar esse valor, muda esse detalhe na tela. */
+        padding: 25px 18px;
+    }
+
+
+    /*
+       Reduz o tamanho do título.
+    */
+    .cabecalho-login h1 {
+        /* É o tamanho das letras. Aqui foi colocado 18px. Se mudar esse valor, muda esse detalhe na tela. */
+        font-size: 18px;
+    }
+
+
+    /*
+       Reduz o tamanho da descrição.
+    */
+    .cabecalho-login p {
+        /* É o tamanho das letras. Aqui foi colocado 8px. Se mudar esse valor, muda esse detalhe na tela. */
+        font-size: 8px;
+    }
+
+}

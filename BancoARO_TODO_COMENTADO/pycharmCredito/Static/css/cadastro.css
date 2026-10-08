@@ -1,0 +1,1296 @@
+/* =========================================================
+   IMPORTAÇÃO DA FONTE
+   ========================================================= */
+
+/*
+   @import importa uma fonte externa do Google Fonts.
+
+   Aqui estamos importando a fonte Inter nos pesos:
+   400 = normal
+   500 = médio
+   600 = semibold
+   700 = negrito
+   800 = negrito forte
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+/* =========================================================
+   RESET GERAL
+   ========================================================= */
+
+/*
+   O seletor * seleciona TODOS os elementos da página.
+*/
+
+* {
+
+    /*
+       Remove a margem padrão que o navegador coloca
+       em elementos como títulos e parágrafos.
+    */
+    /* É o espaço de fora da caixa, para afastar dos outros elementos. Aqui foi colocado 0. Se mudar esse valor, muda esse detalhe na tela. */
+    margin: 0;
+
+    /*
+       Remove o espaçamento interno padrão dos elementos.
+    */
+    /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 0. Se mudar esse valor, muda esse detalhe na tela. */
+    padding: 0;
+
+    /*
+       Faz com que width e height incluam também
+       o padding e a borda do elemento.
+
+       Isso facilita muito o controle dos tamanhos.
+    */
+    /* Controla como largura, borda e padding entram no cálculo. Aqui foi colocado border-box. Se mudar esse valor, muda esse detalhe na tela. */
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+/*
+   O body representa o corpo inteiro da página.
+*/
+
+body {
+
+    /*
+       Define a fonte principal utilizada na página.
+    */
+    /* Escolhe a fonte das letras. Aqui foi colocado 'Inter', sans-serif. Se mudar esse valor, muda esse detalhe na tela. */
+    font-family: 'Inter', sans-serif;
+
+    /*
+       Define a cor de fundo da página.
+
+       O valor está bem próximo do branco,
+       criando o fundo claro da imagem.
+    */
+    /* É a cor do fundo. Aqui foi colocado #faf9f8. Se mudar esse valor, muda esse detalhe na tela. */
+    background-color: #faf9f8;
+
+    /*
+       Define a cor padrão dos textos.
+    */
+    /* É a cor do texto. Aqui foi colocado #222. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #222;
+
+    /*
+       Garante que o body tenha pelo menos
+       a altura completa da tela.
+    */
+    /* Define a altura mínima. Aqui foi colocado 100vh. Se mudar esse valor, muda esse detalhe na tela. */
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   CONTAINER PRINCIPAL
+   ========================================================= */
+
+/*
+   .pagina é o elemento que envolve o card inteiro.
+
+   Ele é responsável por posicionar o formulário
+   no centro da tela.
+*/
+
+.pagina {
+
+    /*
+       Ocupa 100% da largura disponível.
+    */
+    /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 100%;
+
+    /*
+       100vh significa "100% da altura da tela".
+
+       Isso faz a área ocupar a tela inteira.
+    */
+    /* Define a altura mínima. Aqui foi colocado 100vh. Se mudar esse valor, muda esse detalhe na tela. */
+    min-height: 100vh;
+
+    /*
+       Ativa o sistema Flexbox.
+
+       Flexbox facilita o posicionamento dos elementos.
+    */
+    /* Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado flex. Se mudar esse valor, muda esse detalhe na tela. */
+    display: flex;
+
+    /*
+       Organiza os elementos verticalmente.
+
+       Ou seja:
+       card
+       depois footer
+    */
+    /* Define se os itens flex ficam em linha ou coluna. Aqui foi colocado column. Se mudar esse valor, muda esse detalhe na tela. */
+    flex-direction: column;
+
+    /*
+       Centraliza os elementos horizontalmente.
+    */
+    /* Alinha os itens no outro eixo. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    align-items: center;
+
+    /*
+       Centraliza o conteúdo verticalmente.
+    */
+    /* Organiza os itens no eixo principal, tipo centralizar ou separar. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    justify-content: center;
+
+    /*
+       Cria espaço interno entre o conteúdo
+       e as bordas da tela.
+
+       30px = cima/baixo
+       20px = esquerda/direita
+    */
+    /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 30px 20px. Se mudar esse valor, muda esse detalhe na tela. */
+    padding: 30px 20px;
+}
+
+
+/* =========================================================
+   CARD PRINCIPAL
+   ========================================================= */
+
+/*
+   .card é a caixa branca que aparece no centro
+   da página.
+*/
+
+.card {
+
+    /*
+       Faz o card ocupar 100% da largura disponível,
+       respeitando o limite definido em max-width.
+    */
+    /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 100%;
+
+    /*
+       Impede que o card fique maior que 795px.
+
+       Isso mantém a proporção semelhante à imagem.
+    */
+    /* Limita até onde a largura pode crescer. Aqui foi colocado 795px. Se mudar esse valor, muda esse detalhe na tela. */
+    max-width: 795px;
+
+    /*
+       Define a cor branca do card.
+    */
+    /* É a cor do fundo. Aqui foi colocado #ffffff. Se mudar esse valor, muda esse detalhe na tela. */
+    background-color: #ffffff;
+
+    /*
+       Cria espaço interno no card.
+
+       30px em cima e embaixo
+       30px nas laterais
+    */
+    /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 30px 30px 25px. Se mudar esse valor, muda esse detalhe na tela. */
+    padding: 30px 30px 25px;
+
+    /*
+       Arredonda os cantos do card.
+    */
+    /* Arredonda os cantos. Aqui foi colocado 14px. Se mudar esse valor, muda esse detalhe na tela. */
+    border-radius: 14px;
+
+    /*
+       Cria uma sombra suave atrás do card.
+
+       Os valores representam:
+       0    = deslocamento horizontal
+       5px  = deslocamento vertical
+       25px = desfoque
+       rgba = cor preta com transparência
+    */
+    /* Adiciona uma sombra. Aqui foi colocado 0 5px 25px rgba(0, 0, 0, 0.06). Se mudar esse valor, muda esse detalhe na tela. */
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================================
+   ÍCONE DO TOPO
+   ========================================================= */
+
+/*
+   .icone-conta é o pequeno quadrado roxo
+   que aparece acima do título.
+*/
+
+.icone-conta {
+
+    /*
+       Define a largura do ícone.
+    */
+    /* É a largura. Aqui foi colocado 34px. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 34px;
+
+    /*
+       Define a altura do ícone.
+    */
+    /* É a altura. Aqui foi colocado 34px. Se mudar esse valor, muda esse detalhe na tela. */
+    height: 34px;
+
+    /*
+       Centraliza o ícone horizontalmente.
+
+       0 = margem superior/inferior
+       auto = centraliza horizontalmente
+       6px = espaço abaixo do ícone
+    */
+    /* É o espaço de fora da caixa, para afastar dos outros elementos. Aqui foi colocado 0 auto 6px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin: 0 auto 6px;
+
+    /*
+       Ativa o Flexbox.
+    */
+    /* Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado flex. Se mudar esse valor, muda esse detalhe na tela. */
+    display: flex;
+
+    /*
+       Centraliza o conteúdo verticalmente.
+    */
+    /* Alinha os itens no outro eixo. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    align-items: center;
+
+    /*
+       Centraliza o conteúdo horizontalmente.
+    */
+    /* Organiza os itens no eixo principal, tipo centralizar ou separar. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    justify-content: center;
+
+    /*
+       Permite posicionar elementos internos
+       usando position: absolute.
+    */
+    /* Escolhe a maneira como o elemento se posiciona. Aqui foi colocado relative. Se mudar esse valor, muda esse detalhe na tela. */
+    position: relative;
+
+    /*
+       Arredonda os cantos do ícone.
+    */
+    /* Arredonda os cantos. Aqui foi colocado 10px. Se mudar esse valor, muda esse detalhe na tela. */
+    border-radius: 10px;
+
+    /*
+       Define o fundo lilás do ícone.
+    */
+    /* É a cor do fundo. Aqui foi colocado #eee5ff. Se mudar esse valor, muda esse detalhe na tela. */
+    background-color: #eee5ff;
+}
+
+
+/* =========================================================
+   SÍMBOLO PRINCIPAL DO ÍCONE
+   ========================================================= */
+
+.icone-conta span {
+
+    /*
+       Define o tamanho do símbolo.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 17px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 17px;
+
+    /*
+       Define a cor roxa do símbolo.
+    */
+    /* É a cor do texto. Aqui foi colocado #654096. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #654096;
+}
+
+
+/* =========================================================
+   PEQUENO SÍMBOLO DO ÍCONE
+   ========================================================= */
+
+.icone-conta strong {
+
+    /*
+       Permite posicionar o símbolo
+       em uma posição específica.
+    */
+    /* Escolhe a maneira como o elemento se posiciona. Aqui foi colocado absolute. Se mudar esse valor, muda esse detalhe na tela. */
+    position: absolute;
+
+    /*
+       Move o símbolo 5px para cima.
+    */
+    /* É a distância a partir de cima. Aqui foi colocado -5px. Se mudar esse valor, muda esse detalhe na tela. */
+    top: -5px;
+
+    /*
+       Move o símbolo 4px para a direita.
+    */
+    /* É a distância a partir da direita. Aqui foi colocado -4px. Se mudar esse valor, muda esse detalhe na tela. */
+    right: -4px;
+
+    /*
+       Define a cor do símbolo.
+    */
+    /* É a cor do texto. Aqui foi colocado #654096. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #654096;
+
+    /*
+       Define o tamanho do símbolo.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 9px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   TÍTULO "CRIAR CONTA"
+   ========================================================= */
+
+/*
+   Seleciona o elemento h1 que está dentro do card.
+*/
+
+.card h1 {
+
+    /*
+       Centraliza o título.
+    */
+    /* Alinha o texto. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    text-align: center;
+
+    /*
+       Define a cor roxa do título.
+    */
+    /* É a cor do texto. Aqui foi colocado #604092. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #604092;
+
+    /*
+       Define o tamanho da letra.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 20px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 20px;
+
+    /*
+       Deixa o texto em negrito.
+    */
+    /* Controla se a letra fica normal ou mais grossa. Aqui foi colocado 700. Se mudar esse valor, muda esse detalhe na tela. */
+    font-weight: 700;
+
+    /*
+       Cria 7px de espaço abaixo do título.
+    */
+    /* Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 7px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-bottom: 7px;
+}
+
+
+/* =========================================================
+   DESCRIÇÃO
+   ========================================================= */
+
+.descricao {
+
+    /*
+       Centraliza o texto.
+    */
+    /* Alinha o texto. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    text-align: center;
+
+    /*
+       Define a cor cinza da descrição.
+    */
+    /* É a cor do texto. Aqui foi colocado #89838d. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #89838d;
+
+    /*
+       Define o tamanho da fonte.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 9px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 9px;
+
+    /*
+       Define o espaçamento entre as linhas.
+    */
+    /* É a altura de cada linha de texto. Aqui foi colocado 1.5. Se mudar esse valor, muda esse detalhe na tela. */
+    line-height: 1.5;
+
+    /*
+       Cria espaço abaixo da descrição.
+    */
+    /* Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 22px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+/*
+   O formulário ocupa toda a largura disponível
+   dentro do card.
+*/
+
+form {
+
+    /*
+       Faz o formulário ocupar 100% da largura.
+    */
+    /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 100%;
+}
+
+
+/* =========================================================
+   LINHA COM DOIS CAMPOS
+   ========================================================= */
+
+/*
+   .linha é utilizada para colocar dois campos
+   lado a lado.
+
+   Exemplo:
+   E-mail       Senha
+   [campo]      [campo]
+*/
+
+.linha {
+
+    /*
+       Ocupa toda a largura disponível.
+    */
+    /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 100%;
+
+    /*
+       Ativa o Flexbox.
+    */
+    /* Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado flex. Se mudar esse valor, muda esse detalhe na tela. */
+    display: flex;
+
+    /*
+       Alinha os campos pelo topo.
+    */
+    /* Alinha os itens no outro eixo. Aqui foi colocado flex-start. Se mudar esse valor, muda esse detalhe na tela. */
+    align-items: flex-start;
+
+    /*
+       Cria 10px de espaço entre os dois campos.
+    */
+    /* É a distância entre os elementos. Aqui foi colocado 10px. Se mudar esse valor, muda esse detalhe na tela. */
+    gap: 10px;
+}
+
+
+/* =========================================================
+   TAMANHO DOS CAMPOS DENTRO DA LINHA
+   ========================================================= */
+
+/*
+   Cada campo ocupa metade da largura da linha.
+*/
+
+.linha .campo {
+
+    /*
+       50% significa metade da largura disponível.
+    */
+    /* É a largura. Aqui foi colocado 50%. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 50%;
+}
+
+
+/* =========================================================
+   CAMPO INDIVIDUAL
+   ========================================================= */
+
+.campo {
+
+    /*
+       Faz o campo ocupar toda a largura disponível.
+    */
+    /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 100%;
+
+    /*
+       Cria espaço abaixo de cada campo.
+    */
+    /* Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 14px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-bottom: 14px;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+/*
+   Label é o texto que fica acima do input.
+
+   Exemplo:
+   Nome completo
+   [Digite seu nome]
+*/
+
+.campo label {
+
+    /*
+       Faz o label ocupar uma linha inteira.
+    */
+    /* Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado block. Se mudar esse valor, muda esse detalhe na tela. */
+    display: block;
+
+    /*
+       Define a cor do texto.
+    */
+    /* É a cor do texto. Aqui foi colocado #202020. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #202020;
+
+    /*
+       Define o tamanho da fonte.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 8px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 8px;
+
+    /*
+       Deixa o texto em negrito.
+    */
+    /* Controla se a letra fica normal ou mais grossa. Aqui foi colocado 700. Se mudar esse valor, muda esse detalhe na tela. */
+    font-weight: 700;
+
+    /*
+       Cria espaço entre o label e o input.
+    */
+    /* Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 6px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-bottom: 6px;
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+/*
+   Define a aparência dos campos onde
+   o usuário digita as informações.
+*/
+
+.campo input {
+
+    /*
+       Ocupa toda a largura disponível.
+    */
+    /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 100%;
+
+    /*
+       Define a altura do campo.
+    */
+    /* É a altura. Aqui foi colocado 34px. Se mudar esse valor, muda esse detalhe na tela. */
+    height: 34px;
+
+    /*
+       Remove a borda padrão do navegador.
+    */
+    /* É a borda ao redor do elemento. Aqui foi colocado none. Se mudar esse valor, muda esse detalhe na tela. */
+    border: none;
+
+    /*
+       Arredonda os cantos do campo.
+    */
+    /* Arredonda os cantos. Aqui foi colocado 6px. Se mudar esse valor, muda esse detalhe na tela. */
+    border-radius: 6px;
+
+    /*
+       Define o fundo cinza claro.
+    */
+    /* É a cor do fundo. Aqui foi colocado #f0eeee. Se mudar esse valor, muda esse detalhe na tela. */
+    background-color: #f0eeee;
+
+    /*
+       Cria espaço interno.
+
+       0 = cima/baixo
+       12px = esquerda/direita
+    */
+    /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 0 12px. Se mudar esse valor, muda esse detalhe na tela. */
+    padding: 0 12px;
+
+    /*
+       Define a cor do texto digitado.
+    */
+    /* É a cor do texto. Aqui foi colocado #444. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #444;
+
+    /*
+       Mantém a mesma fonte utilizada no restante da página.
+    */
+    /* Escolhe a fonte das letras. Aqui foi colocado 'Inter', sans-serif. Se mudar esse valor, muda esse detalhe na tela. */
+    font-family: 'Inter', sans-serif;
+
+    /*
+       Define o tamanho do texto digitado.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 9px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 9px;
+
+    /*
+       Remove o contorno padrão do navegador.
+    */
+    /* É uma linha de destaque em volta do elemento. Aqui foi colocado none. Se mudar esse valor, muda esse detalhe na tela. */
+    outline: none;
+
+    /*
+       Faz alterações visuais acontecerem
+       suavemente.
+    */
+    /* Faz mudanças de estilo acontecerem suavemente. Aqui foi colocado 0.2s. Se mudar esse valor, muda esse detalhe na tela. */
+    transition: 0.2s;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+/*
+   Placeholder é o texto de exemplo que aparece
+   dentro do input antes do usuário digitar.
+*/
+
+.campo input::placeholder {
+
+    /*
+       Define a cor do placeholder.
+    */
+    /* É a cor do texto. Aqui foi colocado #99939d. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #99939d;
+
+    /*
+       Mantém o placeholder completamente visível.
+    */
+    /* Controla a transparência. Aqui foi colocado 1. Se mudar esse valor, muda esse detalhe na tela. */
+    opacity: 1;
+}
+
+
+/* =========================================================
+   INPUT SELECIONADO
+   ========================================================= */
+
+/*
+   :focus é aplicado quando o usuário
+   clica dentro do campo.
+*/
+
+.campo input:focus {
+
+    /*
+       Muda levemente a cor do fundo.
+    */
+    /* É a cor do fundo. Aqui foi colocado #eeecec. Se mudar esse valor, muda esse detalhe na tela. */
+    background-color: #eeecec;
+
+    /*
+       Cria uma pequena borda roxa ao redor do campo.
+    */
+    /* É uma linha de destaque em volta do elemento. Aqui foi colocado 1px solid #70439b. Se mudar esse valor, muda esse detalhe na tela. */
+    outline: 1px solid #70439b;
+}
+
+
+/* =========================================================
+   LINHA DIVISÓRIA
+   ========================================================= */
+
+.separador {
+
+    /*
+       Ocupa toda a largura.
+    */
+    /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 100%;
+
+    /*
+       Define uma altura de apenas 1px,
+       criando uma linha fina.
+    */
+    /* É a altura. Aqui foi colocado 1px. Se mudar esse valor, muda esse detalhe na tela. */
+    height: 1px;
+
+    /*
+       Define a cor da linha.
+    */
+    /* É a cor do fundo. Aqui foi colocado #eeeeee. Se mudar esse valor, muda esse detalhe na tela. */
+    background-color: #eeeeee;
+
+    /*
+       Define o espaço acima e abaixo da linha.
+
+       4px = acima
+       0   = esquerda/direita
+       17px = abaixo
+    */
+    /* É o espaço de fora da caixa, para afastar dos outros elementos. Aqui foi colocado 4px 0 17px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin: 4px 0 17px;
+}
+
+
+/* =========================================================
+   TÍTULO "PARÂMETROS FINANCEIROS INICIAIS"
+   ========================================================= */
+
+.card h2 {
+
+    /*
+       Define a cor cinza do subtítulo.
+    */
+    /* É a cor do texto. Aqui foi colocado #77717d. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #77717d;
+
+    /*
+       Define o tamanho pequeno da fonte.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 7px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 7px;
+
+    /*
+       Deixa o texto em negrito.
+    */
+    /* Controla se a letra fica normal ou mais grossa. Aqui foi colocado 700. Se mudar esse valor, muda esse detalhe na tela. */
+    font-weight: 700;
+
+    /*
+       Aumenta um pouco o espaço entre as letras.
+    */
+    /* Ajusta o espaço entre as letras. Aqui foi colocado 0.7px. Se mudar esse valor, muda esse detalhe na tela. */
+    letter-spacing: 0.7px;
+
+    /*
+       Cria espaço abaixo do título.
+    */
+    /* Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 15px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   AVISO DE SEGURANÇA / LGPD
+   ========================================================= */
+
+.aviso-seguranca {
+
+    /*
+       Ocupa toda a largura disponível.
+    */
+    /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 100%;
+
+    /*
+       Define uma altura mínima para o aviso.
+    */
+    /* Define a altura mínima. Aqui foi colocado 33px. Se mudar esse valor, muda esse detalhe na tela. */
+    min-height: 33px;
+
+    /*
+       Ativa o Flexbox.
+    */
+    /* Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado flex. Se mudar esse valor, muda esse detalhe na tela. */
+    display: flex;
+
+    /*
+       Centraliza verticalmente o ícone e o texto.
+    */
+    /* Alinha os itens no outro eixo. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    align-items: center;
+
+    /*
+       Define a cor de fundo do aviso.
+    */
+    /* É a cor do fundo. Aqui foi colocado #faf7f7. Se mudar esse valor, muda esse detalhe na tela. */
+    background-color: #faf7f7;
+
+    /*
+       Arredonda os cantos.
+    */
+    /* Arredonda os cantos. Aqui foi colocado 6px. Se mudar esse valor, muda esse detalhe na tela. */
+    border-radius: 6px;
+
+    /*
+       Cria espaço interno.
+
+       7px = cima/baixo
+       12px = esquerda/direita
+    */
+    /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 7px 12px. Se mudar esse valor, muda esse detalhe na tela. */
+    padding: 7px 12px;
+
+    /*
+       Cria espaço acima e abaixo do aviso.
+    */
+    /* É o espaço de fora da caixa, para afastar dos outros elementos. Aqui foi colocado 3px 0 19px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin: 3px 0 19px;
+}
+
+
+/* =========================================================
+   ÍCONE DO AVISO
+   ========================================================= */
+
+/*
+   ::before cria um elemento antes do conteúdo
+   do aviso.
+
+   Aqui usamos isso para colocar o cadeado.
+*/
+
+.aviso-seguranca::before {
+
+    /*
+       Define o conteúdo que será inserido.
+    */
+    /* Controla a propriedade content desse elemento. Aqui foi colocado "🔒". Se mudar esse valor, muda esse detalhe na tela. */
+    content: "🔒";
+
+    /*
+       Define o tamanho do emoji.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 11px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 11px;
+
+    /*
+       Cria espaço entre o cadeado e o texto.
+    */
+    /* Controla a propriedade margin-right desse elemento. Aqui foi colocado 10px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-right: 10px;
+}
+
+
+/* =========================================================
+   TEXTO DO AVISO
+   ========================================================= */
+
+.aviso-seguranca p {
+
+    /*
+       Remove a margem padrão do parágrafo.
+    */
+    /* É o espaço de fora da caixa, para afastar dos outros elementos. Aqui foi colocado 0. Se mudar esse valor, muda esse detalhe na tela. */
+    margin: 0;
+
+    /*
+       Define a cor do texto.
+    */
+    /* É a cor do texto. Aqui foi colocado #89838d. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #89838d;
+
+    /*
+       Define o tamanho do texto.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 7.5px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 7.5px;
+
+    /*
+       Define o espaçamento entre as linhas.
+    */
+    /* É a altura de cada linha de texto. Aqui foi colocado 1.4. Se mudar esse valor, muda esse detalhe na tela. */
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   BOTÃO CADASTRAR
+   ========================================================= */
+
+/* =========================================================
+   BOTÃO "CADASTRAR"
+   ========================================================= */
+
+/*
+   Como agora o botão é um <a>,
+   usamos display: flex para fazer o link
+   ocupar o formato de um botão.
+*/
+
+.botao-cadastrar {
+
+    /* Faz o link ocupar toda a largura disponível */
+    /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 100%;
+
+    /* Define a altura do botão */
+    /* É a altura. Aqui foi colocado 38px. Se mudar esse valor, muda esse detalhe na tela. */
+    height: 38px;
+
+    /* Transforma o link em um elemento flexível */
+    /* Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado flex. Se mudar esse valor, muda esse detalhe na tela. */
+    display: flex;
+
+    /* Centraliza o texto verticalmente */
+    /* Alinha os itens no outro eixo. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    align-items: center;
+
+    /* Centraliza o texto horizontalmente */
+    /* Organiza os itens no eixo principal, tipo centralizar ou separar. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    justify-content: center;
+
+    /* Define o espaço entre "Cadastrar" e a seta */
+    /* É a distância entre os elementos. Aqui foi colocado 13px. Se mudar esse valor, muda esse detalhe na tela. */
+    gap: 13px;
+
+    /* Remove o sublinhado padrão dos links */
+    /* Coloca ou tira decoração do texto, como sublinhado. Aqui foi colocado none. Se mudar esse valor, muda esse detalhe na tela. */
+    text-decoration: none;
+
+    /* Define a cor do fundo */
+    /* É a cor do fundo. Aqui foi colocado #00683f. Se mudar esse valor, muda esse detalhe na tela. */
+    background-color: #00683f;
+
+    /* Define a cor do texto */
+    /* É a cor do texto. Aqui foi colocado #ffffff. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #ffffff;
+
+    /* Define a fonte */
+    /* Escolhe a fonte das letras. Aqui foi colocado 'Inter', sans-serif. Se mudar esse valor, muda esse detalhe na tela. */
+    font-family: 'Inter', sans-serif;
+
+    /* Define o tamanho do texto */
+    /* É o tamanho das letras. Aqui foi colocado 10px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 10px;
+
+    /* Deixa o texto em negrito */
+    /* Controla se a letra fica normal ou mais grossa. Aqui foi colocado 700. Se mudar esse valor, muda esse detalhe na tela. */
+    font-weight: 700;
+
+    /* Arredonda os cantos */
+    /* Arredonda os cantos. Aqui foi colocado 6px. Se mudar esse valor, muda esse detalhe na tela. */
+    border-radius: 6px;
+
+    /* Cria uma pequena sombra */
+    /* Adiciona uma sombra. Aqui foi colocado 0 4px 8px rgba(0, 104, 63, 0.18). Se mudar esse valor, muda esse detalhe na tela. */
+    box-shadow: 0 4px 8px rgba(0, 104, 63, 0.18);
+
+    /* Faz a mudança de cor ser suave */
+    /* Faz mudanças de estilo acontecerem suavemente. Aqui foi colocado 0.2s ease. Se mudar esse valor, muda esse detalhe na tela. */
+    transition: 0.2s ease;
+
+    /* Faz o cursor virar uma mão */
+    /* Muda o desenho do cursor ao passar em cima. Aqui foi colocado pointer. Se mudar esse valor, muda esse detalhe na tela. */
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   EFEITO AO PASSAR O MOUSE
+   ========================================================= */
+
+.botao-cadastrar:hover {
+
+    /* Escurece o botão */
+    /* É a cor do fundo. Aqui foi colocado #005735. Se mudar esse valor, muda esse detalhe na tela. */
+    background-color: #005735;
+
+    /* Remove qualquer sublinhado do link */
+    /* Coloca ou tira decoração do texto, como sublinhado. Aqui foi colocado none. Se mudar esse valor, muda esse detalhe na tela. */
+    text-decoration: none;
+
+    /* Move o botão 1px para cima */
+    /* Move, gira ou aumenta um elemento visualmente. Aqui foi colocado translateY(-1px). Se mudar esse valor, muda esse detalhe na tela. */
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   TEXTO "JÁ POSSUI UMA CONTA?"
+   ========================================================= */
+
+.possui-conta {
+
+    /*
+       Centraliza o texto.
+    */
+    /* Alinha o texto. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    text-align: center;
+
+    /*
+       Define a cor cinza.
+    */
+    /* É a cor do texto. Aqui foi colocado #99939d. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #99939d;
+
+    /*
+       Define o tamanho da fonte.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 8px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 8px;
+
+    /*
+       Cria espaço acima do texto.
+
+       Isso separa o texto do botão.
+    */
+    /* Controla a propriedade margin-top desse elemento. Aqui foi colocado 14px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-top: 14px;
+
+    /*
+       Remove espaço desnecessário abaixo.
+    */
+    /* Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 0. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   LINK "ENTRAR"
+   ========================================================= */
+
+.possui-conta a {
+
+    /*
+       Define a cor roxa do link.
+    */
+    /* É a cor do texto. Aqui foi colocado #654096. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #654096;
+
+    /*
+       Deixa o link em negrito.
+    */
+    /* Controla se a letra fica normal ou mais grossa. Aqui foi colocado 700. Se mudar esse valor, muda esse detalhe na tela. */
+    font-weight: 700;
+
+    /*
+       Remove o sublinhado padrão do link.
+    */
+    /* Coloca ou tira decoração do texto, como sublinhado. Aqui foi colocado none. Se mudar esse valor, muda esse detalhe na tela. */
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   HOVER DO LINK
+   ========================================================= */
+
+.possui-conta a:hover {
+
+    /*
+       Coloca o sublinhado quando
+       o mouse passa sobre o link.
+    */
+    /* Coloca ou tira decoração do texto, como sublinhado. Aqui foi colocado underline. Se mudar esse valor, muda esse detalhe na tela. */
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+footer {
+
+    /*
+       Ocupa toda a largura disponível.
+    */
+    /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+    width: 100%;
+
+    /*
+       Mantém o mesmo tamanho máximo do card.
+    */
+    /* Limita até onde a largura pode crescer. Aqui foi colocado 795px. Se mudar esse valor, muda esse detalhe na tela. */
+    max-width: 795px;
+
+    /*
+       Ativa o Flexbox.
+    */
+    /* Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado flex. Se mudar esse valor, muda esse detalhe na tela. */
+    display: flex;
+
+    /*
+       Centraliza os elementos verticalmente.
+    */
+    /* Alinha os itens no outro eixo. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela. */
+    align-items: center;
+
+    /*
+       Coloca um item no início e outro no final.
+    */
+    /* Organiza os itens no eixo principal, tipo centralizar ou separar. Aqui foi colocado space-between. Se mudar esse valor, muda esse detalhe na tela. */
+    justify-content: space-between;
+
+    /*
+       Cria espaço entre o card e o footer.
+    */
+    /* Controla a propriedade margin-top desse elemento. Aqui foi colocado 10px. Se mudar esse valor, muda esse detalhe na tela. */
+    margin-top: 10px;
+
+    /*
+       Cria um pequeno espaço nas laterais.
+    */
+    /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 0 5px. Se mudar esse valor, muda esse detalhe na tela. */
+    padding: 0 5px;
+
+    /*
+       Define a cor dos textos do footer.
+    */
+    /* É a cor do texto. Aqui foi colocado #aaa4ad. Se mudar esse valor, muda esse detalhe na tela. */
+    color: #aaa4ad;
+
+    /*
+       Define o tamanho da fonte.
+    */
+    /* É o tamanho das letras. Aqui foi colocado 7px. Se mudar esse valor, muda esse detalhe na tela. */
+    font-size: 7px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — TABLETS
+   ========================================================= */
+
+/*
+   Essa regra é aplicada quando a tela
+   tiver no máximo 700px de largura.
+*/
+
+@media (max-width: 700px) {
+
+    /*
+       Diminui o espaço externo da página.
+    */
+    .pagina {
+        /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 25px 15px. Se mudar esse valor, muda esse detalhe na tela. */
+        padding: 25px 15px;
+    }
+
+    /*
+       Diminui o espaço interno do card.
+    */
+    .card {
+        /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 27px 22px 23px. Se mudar esse valor, muda esse detalhe na tela. */
+        padding: 27px 22px 23px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULARES
+   ========================================================= */
+
+/*
+   Essa regra é aplicada em telas de
+   até 500px de largura.
+*/
+
+@media (max-width: 500px) {
+
+    /*
+       Diminui o espaço nas laterais.
+    */
+    .pagina {
+        /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 20px 12px. Se mudar esse valor, muda esse detalhe na tela. */
+        padding: 20px 12px;
+
+        /*
+           No celular, começa o conteúdo
+           mais próximo do topo.
+        */
+        /* Organiza os itens no eixo principal, tipo centralizar ou separar. Aqui foi colocado flex-start. Se mudar esse valor, muda esse detalhe na tela. */
+        justify-content: flex-start;
+    }
+
+    /*
+       Diminui o espaço interno do card.
+    */
+    .card {
+        /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 24px 17px 22px. Se mudar esse valor, muda esse detalhe na tela. */
+        padding: 24px 17px 22px;
+
+        /*
+           Diminui um pouco o arredondamento.
+        */
+        /* Arredonda os cantos. Aqui foi colocado 11px. Se mudar esse valor, muda esse detalhe na tela. */
+        border-radius: 11px;
+    }
+
+    /*
+       No celular, os campos que estavam
+       lado a lado passam a ficar um abaixo do outro.
+
+       Isso evita que os inputs fiquem apertados.
+    */
+    .linha {
+        /* Define se os itens flex ficam em linha ou coluna. Aqui foi colocado column. Se mudar esse valor, muda esse detalhe na tela. */
+        flex-direction: column;
+
+        /*
+           Remove o espaço horizontal entre eles.
+        */
+        /* É a distância entre os elementos. Aqui foi colocado 0. Se mudar esse valor, muda esse detalhe na tela. */
+        gap: 0;
+    }
+
+    /*
+       Cada campo volta a ocupar
+       toda a largura.
+    */
+    .linha .campo {
+        /* É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela. */
+        width: 100%;
+    }
+
+    /*
+       Diminui o tamanho do título.
+    */
+    .card h1 {
+        /* É o tamanho das letras. Aqui foi colocado 19px. Se mudar esse valor, muda esse detalhe na tela. */
+        font-size: 19px;
+    }
+
+    /*
+       Diminui o tamanho da descrição.
+    */
+    .descricao {
+        /* É o tamanho das letras. Aqui foi colocado 8px. Se mudar esse valor, muda esse detalhe na tela. */
+        font-size: 8px;
+    }
+
+    /*
+       Aumenta um pouco a altura dos inputs
+       para facilitar o uso no celular.
+    */
+    .campo input {
+        /* É a altura. Aqui foi colocado 36px. Se mudar esse valor, muda esse detalhe na tela. */
+        height: 36px;
+    }
+
+    /*
+       Aumenta um pouco a altura do botão
+       para facilitar o toque.
+    */
+    .botao-cadastrar {
+        /* É a altura. Aqui foi colocado 38px. Se mudar esse valor, muda esse detalhe na tela. */
+        height: 38px;
+    }
+
+    /*
+       Diminui o tamanho do texto do footer.
+    */
+    footer {
+        /* É o tamanho das letras. Aqui foi colocado 6px. Se mudar esse valor, muda esse detalhe na tela. */
+        font-size: 6px;
+
+        /*
+           Diminui o espaçamento lateral.
+        */
+        /* É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 0 3px. Se mudar esse valor, muda esse detalhe na tela. */
+        padding: 0 3px;
+    }
+}

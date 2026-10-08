@@ -1,0 +1,870 @@
+# Explicação do arquivo main.py
+
+Aqui está o código original, linha por linha, com a explicação do lado. O projeto em si também recebe comentários onde não atrapalha.
+
+LINHA 0001: # Autenticação e cadastro do Banco ARO (Flask + Firebird).
+   ↳ Isso já é um comentário antigo: é só uma anotação para entender o código.
+
+LINHA 0002: import os
+   ↳ Puxa uma ferramenta pronta do Python para a gente conseguir usar aqui.
+
+LINHA 0003: from functools import wraps
+   ↳ Puxa uma ferramenta pronta do Python para a gente conseguir usar aqui.
+
+LINHA 0004: from pathlib import Path
+   ↳ Puxa uma ferramenta pronta do Python para a gente conseguir usar aqui.
+
+LINHA 0005: from decimal import Decimal, InvalidOperation
+   ↳ Puxa uma ferramenta pronta do Python para a gente conseguir usar aqui.
+
+LINHA 0006: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0007: import fdb
+   ↳ Puxa uma ferramenta pronta do Python para a gente conseguir usar aqui.
+
+LINHA 0008: from flask import Flask, render_template, request, flash, redirect, url_for, session
+   ↳ Puxa uma ferramenta pronta do Python para a gente conseguir usar aqui.
+
+LINHA 0009: from flask_bcrypt import Bcrypt
+   ↳ Puxa uma ferramenta pronta do Python para a gente conseguir usar aqui.
+
+LINHA 0010: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0011: BASE = Path(__file__).resolve().parent
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0012: app = Flask(__name__, template_folder=str(BASE / 'Templates'), static_folder=str(BASE / 'Static'), static_url_path='/static')
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0013: app.config['SECRET_KEY'] = os.environ.get('ARO_SECRET_KEY', 'CHAVE-LOCAL-TROQUE-ANTES-DE-PUBLICAR')
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0014: bcrypt = Bcrypt(app)
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0015: DB_PATH = Path(os.environ.get('ARO_DB_PATH', str(BASE.parent / 'BANCO.FDB')))
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0016: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0017: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0018: def conectar():
+   ↳ Aqui começa uma função: o código dela só roda quando essa função é chamada.
+
+LINHA 0019:     return fdb.connect(host=os.environ.get('ARO_DB_HOST', 'localhost'),
+   ↳ Devolve um resultado e termina a execução dessa função nesse ponto.
+
+LINHA 0020:                        database=str(DB_PATH), user=os.environ.get('ARO_DB_USER', 'sysdba'),
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0021:                        password=os.environ.get('ARO_DB_PASSWORD', 'masterkey'), charset='UTF8')
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0022: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0023: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0024: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0025: def preparar_seguranca():
+   ↳ Aqui começa uma função: o código dela só roda quando essa função é chamada.
+
+LINHA 0026:     # Migração idempotente: executar com permissão DDL.
+   ↳ Isso já é um comentário antigo: é só uma anotação para entender o código.
+
+LINHA 0027:     con = conectar()
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0028:     cur = con.cursor()
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0029:     try:
+   ↳ Tenta executar esse pedaço do código e fica pronto para tratar algum erro.
+
+LINHA 0030:         cur.execute("SELECT TRIM(RDB$FIELD_NAME) FROM RDB$RELATION_FIELDS WHERE RDB$RELATION_NAME = 'USUARIO'")
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0031:         campos = {r[0].upper() for r in cur.fetchall()}
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0032:         for nome, tipo in [('ATIVO', 'SMALLINT DEFAULT 1 NOT NULL'),
+   ↳ Repete esse bloco para cada item que aparecer nessa lista ou resultado.
+
+LINHA 0033:                            ('TENTATIVAS_LOGIN', 'SMALLINT DEFAULT 0 NOT NULL'),
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0034:                            ('BLOQUEADO', 'SMALLINT DEFAULT 0 NOT NULL')]:
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0035:             if nome not in campos:
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0036:                 cur.execute(f'ALTER TABLE USUARIO ADD {nome} {tipo}')
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0037:                 con.commit()
+   ↳ Confirma e salva de verdade as alterações feitas no banco.
+
+LINHA 0038:         cur.execute("SELECT COUNT(*) FROM RDB$RELATIONS WHERE RDB$RELATION_NAME = 'HISTORICO_SENHA'")
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0039:         if cur.fetchone()[0] == 0:
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0040:             cur.execute('''CREATE TABLE HISTORICO_SENHA (
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0041:                 ID_HISTORICO INTEGER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0042:                 ID_USUARIO INTEGER NOT NULL,
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0043:                 SENHA_HASH VARCHAR(255) NOT NULL,
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0044:                 CRIADO_EM TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0045:                 CONSTRAINT FK_HIST_SENHA_USUARIO FOREIGN KEY (ID_USUARIO)
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0046:                     REFERENCES USUARIO(ID_USUARIO) ON DELETE CASCADE
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0047:             )''')
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0048:             con.commit()
+   ↳ Confirma e salva de verdade as alterações feitas no banco.
+
+LINHA 0049:         # As senhas atuais são verificadas diretamente na tabela USUARIO.
+   ↳ Isso já é um comentário antigo: é só uma anotação para entender o código.
+
+LINHA 0050:         # O histórico só armazena senhas anteriores a partir da primeira troca.
+   ↳ Isso já é um comentário antigo: é só uma anotação para entender o código.
+
+LINHA 0051:     except Exception:
+   ↳ Se acontecer esse tipo de erro, cai nesse bloco em vez de parar o site.
+
+LINHA 0052:         con.rollback()
+   ↳ Desfaz as alterações dessa operação quando aconteceu um erro.
+
+LINHA 0053:         raise
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0054:     finally:
+   ↳ Esse bloco roda no final, mesmo se deu erro, para fechar recursos.
+
+LINHA 0055:         cur.close()
+   ↳ Fecha essa conexão ou cursor para não deixar recurso aberto.
+
+LINHA 0056:         con.close()
+   ↳ Fecha essa conexão ou cursor para não deixar recurso aberto.
+
+LINHA 0057: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0058: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0059: def senha_ja_utilizada(cursor, id_usuario, nova_senha, hash_atual):
+   ↳ Aqui começa uma função: o código dela só roda quando essa função é chamada.
+
+LINHA 0060:     if bcrypt.check_password_hash(hash_atual, nova_senha):
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0061:         return True
+   ↳ Devolve um resultado e termina a execução dessa função nesse ponto.
+
+LINHA 0062:     cursor.execute('''SELECT FIRST 3 SENHA_HASH FROM HISTORICO_SENHA
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0063:                       WHERE ID_USUARIO = ? ORDER BY ID_HISTORICO DESC''', (id_usuario,))
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0064:     return any(bcrypt.check_password_hash(item[0], nova_senha) for item in cursor.fetchall())
+   ↳ Usa bcrypt para criar ou conferir o hash seguro da senha, sem salvar a senha normal.
+
+LINHA 0065: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0066: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0067: def senha_forte(senha):
+   ↳ Aqui começa uma função: o código dela só roda quando essa função é chamada.
+
+LINHA 0068:     # Validação artesanal, usando funções nativas do Python.
+   ↳ Isso já é um comentário antigo: é só uma anotação para entender o código.
+
+LINHA 0069:     return (len(senha) >= 8 and any(c.isupper() for c in senha)
+   ↳ Devolve um resultado e termina a execução dessa função nesse ponto.
+
+LINHA 0070:             and any(c.islower() for c in senha) and any(c.isdigit() for c in senha))
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0071: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0072: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0073: def valor_monetario(texto):
+   ↳ Aqui começa uma função: o código dela só roda quando essa função é chamada.
+
+LINHA 0074:     texto = (texto or '').strip().replace('R$', '').replace(' ', '')
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0075:     if ',' in texto:
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0076:         texto = texto.replace('.', '').replace(',', '.')
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0077:     try:
+   ↳ Tenta executar esse pedaço do código e fica pronto para tratar algum erro.
+
+LINHA 0078:         valor = Decimal(texto)
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0079:         if not valor.is_finite() or valor < 0:
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0080:             raise ValueError()
+   ↳ Interrompe esse caminho porque foi encontrada uma situação inválida.
+
+LINHA 0081:         return valor
+   ↳ Devolve um resultado e termina a execução dessa função nesse ponto.
+
+LINHA 0082:     except (InvalidOperation, ValueError):
+   ↳ Se acontecer esse tipo de erro, cai nesse bloco em vez de parar o site.
+
+LINHA 0083:         raise ValueError('Informe valores válidos para renda e despesas.')
+   ↳ Interrompe esse caminho porque foi encontrada uma situação inválida.
+
+LINHA 0084: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0085: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0086: def autenticado(view):
+   ↳ Aqui começa uma função: o código dela só roda quando essa função é chamada.
+
+LINHA 0087:     @wraps(view)
+   ↳ Esse decorador acrescenta uma regra à função logo embaixo, como exigir login.
+
+LINHA 0088:     def protegido(*args, **kwargs):
+   ↳ Aqui começa uma função: o código dela só roda quando essa função é chamada.
+
+LINHA 0089:         if 'id_usuario' not in session:
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0090:             flash('Você precisa estar logado.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0091:             return redirect(url_for('login'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0092:         con = conectar()
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0093:         cur = con.cursor()
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0094:         try:
+   ↳ Tenta executar esse pedaço do código e fica pronto para tratar algum erro.
+
+LINHA 0095:             cur.execute('SELECT ATIVO, BLOQUEADO FROM USUARIO WHERE ID_USUARIO = ?', (session['id_usuario'],))
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0096:             situacao = cur.fetchone()
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0097:         finally:
+   ↳ Esse bloco roda no final, mesmo se deu erro, para fechar recursos.
+
+LINHA 0098:             cur.close()
+   ↳ Fecha essa conexão ou cursor para não deixar recurso aberto.
+
+LINHA 0099:             con.close()
+   ↳ Fecha essa conexão ou cursor para não deixar recurso aberto.
+
+LINHA 0100:         if not situacao or not situacao[0] or situacao[1]:
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0101:             session.clear()
+   ↳ Usa a sessão para lembrar quem entrou ou para sair da conta.
+
+LINHA 0102:             flash('Conta inativa ou bloqueada. Entre em contato com o administrador.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0103:             return redirect(url_for('login'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0104:         return view(*args, **kwargs)
+   ↳ Devolve um resultado e termina a execução dessa função nesse ponto.
+
+LINHA 0105:     return protegido
+   ↳ Devolve um resultado e termina a execução dessa função nesse ponto.
+
+LINHA 0106: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0107: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0108: @app.route('/')
+   ↳ Essa é uma rota: liga um endereço do site à função logo embaixo. GET abre a tela e POST recebe os dados.
+
+LINHA 0109: def landing():
+   ↳ Aqui começa uma função: o código dela só roda quando essa função é chamada.
+
+LINHA 0110:     return render_template('landing.html')
+   ↳ Pede para o Flask montar e mostrar essa página HTML.
+
+LINHA 0111: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0112: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0113: @app.route('/cadastro', methods=['GET', 'POST'])
+   ↳ Essa é uma rota: liga um endereço do site à função logo embaixo. GET abre a tela e POST recebe os dados.
+
+LINHA 0114: def cadastro():
+   ↳ Aqui começa uma função: o código dela só roda quando essa função é chamada.
+
+LINHA 0115:     if request.method == 'GET':
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0116:         return render_template('cadastro.html')
+   ↳ Pede para o Flask montar e mostrar essa página HTML.
+
+LINHA 0117:     nome = request.form.get('nome', '').strip()
+   ↳ Pega o valor enviado pelo formulário HTML; o nome tem que bater com o name do campo.
+
+LINHA 0118:     email = request.form.get('email', '').strip().lower()
+   ↳ Pega o valor enviado pelo formulário HTML; o nome tem que bater com o name do campo.
+
+LINHA 0119:     senha = request.form.get('senha', '')
+   ↳ Pega o valor enviado pelo formulário HTML; o nome tem que bater com o name do campo.
+
+LINHA 0120:     if not nome or not email or not senha:
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0121:         flash('Preencha nome, e-mail e senha.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0122:         return redirect(url_for('cadastro'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0123:     if not senha_forte(senha):
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0124:         flash('Use pelo menos 8 caracteres, com maiúscula, minúscula e número.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0125:         return redirect(url_for('cadastro'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0126:     try:
+   ↳ Tenta executar esse pedaço do código e fica pronto para tratar algum erro.
+
+LINHA 0127:         receita = valor_monetario(request.form.get('renda'))
+   ↳ Pega o valor enviado pelo formulário HTML; o nome tem que bater com o name do campo.
+
+LINHA 0128:         despesa = valor_monetario(request.form.get('despesas'))
+   ↳ Pega o valor enviado pelo formulário HTML; o nome tem que bater com o name do campo.
+
+LINHA 0129:     except ValueError as e:
+   ↳ Se acontecer esse tipo de erro, cai nesse bloco em vez de parar o site.
+
+LINHA 0130:         flash(str(e), 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0131:         return redirect(url_for('cadastro'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0132:     con = conectar()
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0133:     cursor = con.cursor()
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0134:     try:
+   ↳ Tenta executar esse pedaço do código e fica pronto para tratar algum erro.
+
+LINHA 0135:         cursor.execute('SELECT 1 FROM USUARIO WHERE LOWER(EMAIL) = ?', (email,))
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0136:         if cursor.fetchone():
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0137:             flash('Este e-mail já foi cadastrado.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0138:             return redirect(url_for('cadastro'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0139:         hash_senha = bcrypt.generate_password_hash(senha).decode('utf-8')
+   ↳ Usa bcrypt para criar ou conferir o hash seguro da senha, sem salvar a senha normal.
+
+LINHA 0140:         cursor.execute('''INSERT INTO USUARIO
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0141:             (NOME, EMAIL, SENHA, RECEITA_MENSAL, DESPESA_MENSAL, TIPO_USUARIO)
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0142:             VALUES (?, ?, ?, ?, ?, ?)''', (nome, email, hash_senha, receita, despesa, 1))
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0143:         con.commit()
+   ↳ Confirma e salva de verdade as alterações feitas no banco.
+
+LINHA 0144:         flash('Cadastro realizado! Entre na sua conta.', 'success')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0145:         return redirect(url_for('login'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0146:     except Exception:
+   ↳ Se acontecer esse tipo de erro, cai nesse bloco em vez de parar o site.
+
+LINHA 0147:         con.rollback()
+   ↳ Desfaz as alterações dessa operação quando aconteceu um erro.
+
+LINHA 0148:         app.logger.exception('Falha no cadastro')
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0149:         flash('Não foi possível concluir o cadastro.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0150:         return redirect(url_for('cadastro'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0151:     finally:
+   ↳ Esse bloco roda no final, mesmo se deu erro, para fechar recursos.
+
+LINHA 0152:         cursor.close()
+   ↳ Fecha essa conexão ou cursor para não deixar recurso aberto.
+
+LINHA 0153:         con.close()
+   ↳ Fecha essa conexão ou cursor para não deixar recurso aberto.
+
+LINHA 0154: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0155: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0156: @app.route('/login', methods=['GET', 'POST'])
+   ↳ Essa é uma rota: liga um endereço do site à função logo embaixo. GET abre a tela e POST recebe os dados.
+
+LINHA 0157: def login():
+   ↳ Aqui começa uma função: o código dela só roda quando essa função é chamada.
+
+LINHA 0158:     if request.method == 'GET':
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0159:         return render_template('login.html')
+   ↳ Pede para o Flask montar e mostrar essa página HTML.
+
+LINHA 0160:     email = request.form.get('email', '').strip().lower()
+   ↳ Pega o valor enviado pelo formulário HTML; o nome tem que bater com o name do campo.
+
+LINHA 0161:     senha = request.form.get('senha', '')
+   ↳ Pega o valor enviado pelo formulário HTML; o nome tem que bater com o name do campo.
+
+LINHA 0162:     con = conectar()
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0163:     cursor = con.cursor()
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0164:     try:
+   ↳ Tenta executar esse pedaço do código e fica pronto para tratar algum erro.
+
+LINHA 0165:         cursor.execute('''SELECT ID_USUARIO, NOME, SENHA, ATIVO, TENTATIVAS_LOGIN, BLOQUEADO
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0166:                           FROM USUARIO WHERE LOWER(EMAIL) = ?''', (email,))
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0167:         usuario = cursor.fetchone()
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0168:         if not usuario:
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0169:             flash('E-mail ou senha incorretos.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0170:             return redirect(url_for('login'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0171:         id_usuario, nome, senha_hash, ativo, tentativas, bloqueado = usuario
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0172:         if not ativo:
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0173:             flash('Usuário inativo. Entre em contato com o administrador.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0174:             return redirect(url_for('login'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0175:         if bloqueado or tentativas >= 3:
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0176:             flash('Usuário bloqueado após 3 tentativas. Entre em contato com o administrador.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0177:             return redirect(url_for('login'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0178:         if not bcrypt.check_password_hash(senha_hash, senha):
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0179:             tentativas = (tentativas or 0) + 1
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0180:             cursor.execute('''UPDATE USUARIO SET TENTATIVAS_LOGIN = ?, BLOQUEADO = ?
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0181:                               WHERE ID_USUARIO = ?''', (tentativas, 1 if tentativas >= 3 else 0, id_usuario))
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0182:             con.commit()
+   ↳ Confirma e salva de verdade as alterações feitas no banco.
+
+LINHA 0183:             if tentativas >= 3:
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0184:                 flash('Usuário bloqueado após 3 tentativas incorretas.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0185:             else:
+   ↳ Se nenhuma das condições anteriores passou, faz esse caminho.
+
+LINHA 0186:                 flash(f'E-mail ou senha incorretos. Tentativa {tentativas} de 3.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0187:             return redirect(url_for('login'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0188:         cursor.execute('UPDATE USUARIO SET TENTATIVAS_LOGIN = 0 WHERE ID_USUARIO = ?', (id_usuario,))
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0189:         con.commit()
+   ↳ Confirma e salva de verdade as alterações feitas no banco.
+
+LINHA 0190:         session.clear()
+   ↳ Usa a sessão para lembrar quem entrou ou para sair da conta.
+
+LINHA 0191:         session['id_usuario'] = id_usuario
+   ↳ Usa a sessão para lembrar quem entrou ou para sair da conta.
+
+LINHA 0192:         session['nome_usuario'] = nome
+   ↳ Usa a sessão para lembrar quem entrou ou para sair da conta.
+
+LINHA 0193:         flash('Login realizado com sucesso!', 'success')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0194:         return redirect(url_for('inicio'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0195:     except Exception:
+   ↳ Se acontecer esse tipo de erro, cai nesse bloco em vez de parar o site.
+
+LINHA 0196:         con.rollback()
+   ↳ Desfaz as alterações dessa operação quando aconteceu um erro.
+
+LINHA 0197:         app.logger.exception('Falha no login')
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0198:         flash('Não foi possível entrar no momento.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0199:         return redirect(url_for('login'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0200:     finally:
+   ↳ Esse bloco roda no final, mesmo se deu erro, para fechar recursos.
+
+LINHA 0201:         cursor.close()
+   ↳ Fecha essa conexão ou cursor para não deixar recurso aberto.
+
+LINHA 0202:         con.close()
+   ↳ Fecha essa conexão ou cursor para não deixar recurso aberto.
+
+LINHA 0203: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0204: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0205: @app.route('/inicio')
+   ↳ Essa é uma rota: liga um endereço do site à função logo embaixo. GET abre a tela e POST recebe os dados.
+
+LINHA 0206: @app.route('/novo')
+   ↳ Essa é uma rota: liga um endereço do site à função logo embaixo. GET abre a tela e POST recebe os dados.
+
+LINHA 0207: @autenticado
+   ↳ Esse decorador acrescenta uma regra à função logo embaixo, como exigir login.
+
+LINHA 0208: def inicio():
+   ↳ Aqui começa uma função: o código dela só roda quando essa função é chamada.
+
+LINHA 0209:     return render_template('inicio.html', usuario=session['nome_usuario'])
+   ↳ Pede para o Flask montar e mostrar essa página HTML.
+
+LINHA 0210: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0211: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0212: @app.route('/editar_usuario', methods=['GET', 'POST'])
+   ↳ Essa é uma rota: liga um endereço do site à função logo embaixo. GET abre a tela e POST recebe os dados.
+
+LINHA 0213: @autenticado
+   ↳ Esse decorador acrescenta uma regra à função logo embaixo, como exigir login.
+
+LINHA 0214: def editar_usuario():
+   ↳ Aqui começa uma função: o código dela só roda quando essa função é chamada.
+
+LINHA 0215:     # Edita o usuário autenticado sem modificar a chave primária.
+   ↳ Isso já é um comentário antigo: é só uma anotação para entender o código.
+
+LINHA 0216:     con = conectar()
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0217:     cursor = con.cursor()
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0218:     try:
+   ↳ Tenta executar esse pedaço do código e fica pronto para tratar algum erro.
+
+LINHA 0219:         cursor.execute('''SELECT NOME, EMAIL, RECEITA_MENSAL, DESPESA_MENSAL, SENHA
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0220:                           FROM USUARIO WHERE ID_USUARIO = ?''', (session['id_usuario'],))
+   ↳ Usa a sessão para lembrar quem entrou ou para sair da conta.
+
+LINHA 0221:         usuario = cursor.fetchone()
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0222:         if not usuario:
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0223:             session.clear()
+   ↳ Usa a sessão para lembrar quem entrou ou para sair da conta.
+
+LINHA 0224:             flash('Usuário não encontrado.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0225:             return redirect(url_for('login'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0226:         if request.method == 'GET':
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0227:             return render_template('editar_usuario.html', usuario=usuario)
+   ↳ Pede para o Flask montar e mostrar essa página HTML.
+
+LINHA 0228:         nome = request.form.get('nome', '').strip()
+   ↳ Pega o valor enviado pelo formulário HTML; o nome tem que bater com o name do campo.
+
+LINHA 0229:         email = request.form.get('email', '').strip().lower()
+   ↳ Pega o valor enviado pelo formulário HTML; o nome tem que bater com o name do campo.
+
+LINHA 0230:         senha = request.form.get('senha', '')
+   ↳ Pega o valor enviado pelo formulário HTML; o nome tem que bater com o name do campo.
+
+LINHA 0231:         if not nome or not email:
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0232:             flash('Nome e e-mail são obrigatórios.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0233:             return redirect(url_for('editar_usuario'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0234:         if senha and not senha_forte(senha):
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0235:             flash('A nova senha deve ter 8 caracteres, maiúscula, minúscula e número.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0236:             return redirect(url_for('editar_usuario'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0237:         receita = valor_monetario(request.form.get('renda'))
+   ↳ Pega o valor enviado pelo formulário HTML; o nome tem que bater com o name do campo.
+
+LINHA 0238:         despesa = valor_monetario(request.form.get('despesas'))
+   ↳ Pega o valor enviado pelo formulário HTML; o nome tem que bater com o name do campo.
+
+LINHA 0239:         cursor.execute('SELECT 1 FROM USUARIO WHERE LOWER(EMAIL) = ? AND ID_USUARIO <> ?',
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0240:                        (email, session['id_usuario']))
+   ↳ Usa a sessão para lembrar quem entrou ou para sair da conta.
+
+LINHA 0241:         if cursor.fetchone():
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0242:             flash('Este e-mail já está em uso.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0243:             return redirect(url_for('editar_usuario'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0244:         if senha:
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0245:             if senha_ja_utilizada(cursor, session['id_usuario'], senha, usuario[4]):
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0246:                 flash('A nova senha não pode ser igual à atual ou a uma das 3 anteriores.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0247:                 return redirect(url_for('editar_usuario'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0248:             hash_senha = bcrypt.generate_password_hash(senha).decode('utf-8')
+   ↳ Usa bcrypt para criar ou conferir o hash seguro da senha, sem salvar a senha normal.
+
+LINHA 0249:             cursor.execute('''INSERT INTO HISTORICO_SENHA (ID_USUARIO, SENHA_HASH)
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0250:                               VALUES (?, ?)''', (session['id_usuario'], usuario[4]))
+   ↳ Usa a sessão para lembrar quem entrou ou para sair da conta.
+
+LINHA 0251:             cursor.execute('''UPDATE USUARIO SET NOME=?, EMAIL=?, SENHA=?, RECEITA_MENSAL=?, DESPESA_MENSAL=?
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0252:                               WHERE ID_USUARIO=?''', (nome, email, hash_senha, receita, despesa, session['id_usuario']))
+   ↳ Usa a sessão para lembrar quem entrou ou para sair da conta.
+
+LINHA 0253:         else:
+   ↳ Se nenhuma das condições anteriores passou, faz esse caminho.
+
+LINHA 0254:             cursor.execute('''UPDATE USUARIO SET NOME=?, EMAIL=?, RECEITA_MENSAL=?, DESPESA_MENSAL=?
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0255:                               WHERE ID_USUARIO=?''', (nome, email, receita, despesa, session['id_usuario']))
+   ↳ Usa a sessão para lembrar quem entrou ou para sair da conta.
+
+LINHA 0256:         if senha:
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0257:             cursor.execute('''DELETE FROM HISTORICO_SENHA WHERE ID_USUARIO = ?
+   ↳ Envia um comando SQL para o banco Firebird; os ? recebem os valores sem montar SQL na mão.
+
+LINHA 0258:                               AND ID_HISTORICO NOT IN (
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0259:                                 SELECT FIRST 3 ID_HISTORICO FROM HISTORICO_SENHA
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0260:                                 WHERE ID_USUARIO = ? ORDER BY ID_HISTORICO DESC
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.
+
+LINHA 0261:                               )''', (session['id_usuario'], session['id_usuario']))
+   ↳ Usa a sessão para lembrar quem entrou ou para sair da conta.
+
+LINHA 0262:         con.commit()
+   ↳ Confirma e salva de verdade as alterações feitas no banco.
+
+LINHA 0263:         session['nome_usuario'] = nome
+   ↳ Usa a sessão para lembrar quem entrou ou para sair da conta.
+
+LINHA 0264:         flash('Dados atualizados.', 'success')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0265:         return redirect(url_for('inicio'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0266:     except ValueError as e:
+   ↳ Se acontecer esse tipo de erro, cai nesse bloco em vez de parar o site.
+
+LINHA 0267:         flash(str(e), 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0268:         return redirect(url_for('editar_usuario'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0269:     except Exception:
+   ↳ Se acontecer esse tipo de erro, cai nesse bloco em vez de parar o site.
+
+LINHA 0270:         con.rollback()
+   ↳ Desfaz as alterações dessa operação quando aconteceu um erro.
+
+LINHA 0271:         app.logger.exception('Falha na edição')
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0272:         flash('Não foi possível atualizar os dados.', 'error')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0273:         return redirect(url_for('inicio'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0274:     finally:
+   ↳ Esse bloco roda no final, mesmo se deu erro, para fechar recursos.
+
+LINHA 0275:         cursor.close()
+   ↳ Fecha essa conexão ou cursor para não deixar recurso aberto.
+
+LINHA 0276:         con.close()
+   ↳ Fecha essa conexão ou cursor para não deixar recurso aberto.
+
+LINHA 0277: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0278: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0279: @app.route('/logout', methods=['POST'])
+   ↳ Essa é uma rota: liga um endereço do site à função logo embaixo. GET abre a tela e POST recebe os dados.
+
+LINHA 0280: @autenticado
+   ↳ Esse decorador acrescenta uma regra à função logo embaixo, como exigir login.
+
+LINHA 0281: def logout():
+   ↳ Aqui começa uma função: o código dela só roda quando essa função é chamada.
+
+LINHA 0282:     session.clear()
+   ↳ Usa a sessão para lembrar quem entrou ou para sair da conta.
+
+LINHA 0283:     flash('Você saiu da sua conta.', 'success')
+   ↳ Guarda uma mensagem para aparecer na página, como aviso de erro ou sucesso.
+
+LINHA 0284:     return redirect(url_for('login'))
+   ↳ Manda o navegador abrir outro endereço depois dessa ação.
+
+LINHA 0285: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0286: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0287: if __name__ == '__main__':
+   ↳ Aqui o código confere uma condição; se for verdadeira, entra nesse bloco.
+
+LINHA 0288:     preparar_seguranca()
+   ↳ Essa instrução faz parte da lógica que está sendo executada nesse bloco.
+
+LINHA 0289:     app.run(debug=os.environ.get('ARO_DEBUG') == '1')
+   ↳ Aqui um valor está sendo guardado numa variável ou uma informação está sendo configurada.

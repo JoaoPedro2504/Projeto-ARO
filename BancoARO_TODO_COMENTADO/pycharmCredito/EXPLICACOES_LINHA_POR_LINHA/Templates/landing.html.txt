@@ -1,0 +1,873 @@
+# Explicação do arquivo Templates/landing.html
+
+Aqui está o código original, linha por linha, com a explicação do lado. O projeto em si também recebe comentários onde não atrapalha.
+
+LINHA 0001: <!DOCTYPE html>
+   ↳ Isso avisa ao navegador que essa página usa HTML moderno.
+
+LINHA 0002: <html lang="pt-br">
+   ↳ É o começo da página HTML; lang indica o idioma.
+
+LINHA 0003: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0004: <head>
+   ↳ É a parte das configurações, que não aparece como conteúdo principal.
+
+LINHA 0005:     <meta charset="UTF-8">
+   ↳ Passa uma configuração para o navegador, como caracteres e adaptação ao celular.
+
+LINHA 0006:     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   ↳ Passa uma configuração para o navegador, como caracteres e adaptação ao celular; name é a chave que chega no request.form do Flask.
+
+LINHA 0007:     <title>ARO - Seu futuro financeiro</title>
+   ↳ É o nome que aparece na aba do navegador.
+
+LINHA 0008:     <link rel="stylesheet" href="static/css/landing.css">
+   ↳ Liga esse HTML ao CSS externo.
+
+LINHA 0009: </head>
+   ↳ Fecha o elemento head que foi aberto antes.
+
+LINHA 0010: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0011: <body>
+   ↳ Aqui começa o que aparece na tela.
+
+LINHA 0012: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0013:     <!-- CABEÇALHO -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0014:     <header>
+   ↳ É o topo de uma área ou página.
+
+LINHA 0015: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0016:         <!-- MENU DE NAVEGAÇÃO -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0017:         <nav>
+   ↳ É a área de links de navegação.
+
+LINHA 0018:             <h1>ARO</h1>
+   ↳ É o título mais importante da página.
+
+LINHA 0019: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0020:             <div class="menu">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0021:                 <a href="#inicio">Para você</a>
+   ↳ Cria um link clicável para outra página.
+
+LINHA 0022:                 <a href="#solucoes">Soluções</a>
+   ↳ Cria um link clicável para outra página.
+
+LINHA 0023:                 <a href="#seguranca">Segurança</a>
+   ↳ Cria um link clicável para outra página.
+
+LINHA 0024:                 <a href="#praticidade">Praticidade</a>
+   ↳ Cria um link clicável para outra página.
+
+LINHA 0025:                 <a href="/cadastro" class="entrar">Entrar</a>
+   ↳ Cria um link clicável para outra página; class liga ele aos estilos do CSS.
+
+LINHA 0026:             </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0027:         </nav>
+   ↳ Fecha o elemento nav que foi aberto antes.
+
+LINHA 0028: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0029:         <!-- AVISO DO PROJETO -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0030:         <p class="aviso">
+   ↳ É um parágrafo de texto; class liga ele aos estilos do CSS.
+
+LINHA 0031: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0032:             AMBIENTE ACADÊMICO - PROJETO EXPERIMENTAL 2026
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0033:         </p>
+   ↳ Fecha o elemento p que foi aberto antes.
+
+LINHA 0034: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0035:     </header>
+   ↳ Fecha o elemento header que foi aberto antes.
+
+LINHA 0036: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0037:     <main>
+   ↳ Marca a parte principal da tela.
+
+LINHA 0038: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0039:         <!-- INÍCIO -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0040:         <section class="inicio" id="inicio">
+   ↳ Separa uma área importante da página; class liga ele aos estilos do CSS; id identifica esse elemento.
+
+LINHA 0041: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0042:             <div class="conteudo">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0043: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0044:                 <span class="etiqueta">
+   ↳ Marca um pedacinho de texto para formatar; class liga ele aos estilos do CSS.
+
+LINHA 0045: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0046:                     Conta para empreendedores
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0047:                 </span>
+   ↳ Fecha o elemento span que foi aberto antes.
+
+LINHA 0048: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0049:                 <h2>
+   ↳ É um subtítulo da página.
+
+LINHA 0050: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0051:                     Mais controle para o seu
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0052: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0053:                     futuro financeiro.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0054:                 </h2>
+   ↳ Fecha o elemento h2 que foi aberto antes.
+
+LINHA 0055: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0056:                 <p>
+   ↳ É um parágrafo de texto.
+
+LINHA 0057: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0058:                     No ARO, você acompanha seus gastos,
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0059: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0060:                     organiza suas finanças e conquista
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0061: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0062:                     seus objetivos com segurança e praticidade.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0063:                 </p>
+   ↳ Fecha o elemento p que foi aberto antes.
+
+LINHA 0064: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0065:                 <a href="/cadastro" class="botao">Login →</a>
+   ↳ Cria um link clicável para outra página; class liga ele aos estilos do CSS.
+
+LINHA 0066: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0067:             </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0068: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0069:             <!-- IMAGEM PRINCIPAL -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0070:             <img src="img/notebook.png" alt="Sistema ARO">
+   ↳ Mostra uma imagem; src diz onde ela está.
+
+LINHA 0071: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0072:         </section>
+   ↳ Fecha o elemento section que foi aberto antes.
+
+LINHA 0073: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0074: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0075:         <!-- SOLUÇÕES -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0076:         <section class="solucoes" id="solucoes">
+   ↳ Separa uma área importante da página; class liga ele aos estilos do CSS; id identifica esse elemento.
+
+LINHA 0077: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0078:             <p>Por que escolher o ARO?</p>
+   ↳ É um parágrafo de texto.
+
+LINHA 0079: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0080:             <h2>
+   ↳ É um subtítulo da página.
+
+LINHA 0081: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0082:                 Tudo o que você precisa para gerenciar<br>
+   ↳ Esse elemento HTML br monta uma parte da página.
+
+LINHA 0083: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0084:                 seu dinheiro, em um só lugar.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0085:             </h2>
+   ↳ Fecha o elemento h2 que foi aberto antes.
+
+LINHA 0086: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0087:             <p>
+   ↳ É um parágrafo de texto.
+
+LINHA 0088: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0089:                 Oferecemos soluções simples e seguras
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0090: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0091:                 para você ter mais liberdade e tranquilidade
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0092: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0093:                 no seu dia a dia.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0094:             </p>
+   ↳ Fecha o elemento p que foi aberto antes.
+
+LINHA 0095: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0096:             <!-- CARDS -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0097:             <div class="cards">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0098: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0099:                 <!-- CONTA DIGITAL -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0100:                 <div class="card">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0101: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0102:                     <img src="img/icone-celular.png" alt="Conta digital" class="icone-img">
+   ↳ Mostra uma imagem; src diz onde ela está; class liga ele aos estilos do CSS.
+
+LINHA 0103: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0104:                     <h3>Conta digital completa</h3>
+   ↳ É um título menor.
+
+LINHA 0105: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0106:                     <p>
+   ↳ É um parágrafo de texto.
+
+LINHA 0107: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0108:                         Abra sua conta em minutos e
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0109: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0110:                         tenha tudo pelo celular.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0111:                     </p>
+   ↳ Fecha o elemento p que foi aberto antes.
+
+LINHA 0112: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0113:                 </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0114: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0115:                 <!-- CARTÃO -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0116:                 <div class="card">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0117: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0118:                     <img src="img/icone-cartao.png" alt="Cartão" class="icone-img">
+   ↳ Mostra uma imagem; src diz onde ela está; class liga ele aos estilos do CSS.
+
+LINHA 0119: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0120:                     <h3>Cartão sem anuidade</h3>
+   ↳ É um título menor.
+
+LINHA 0121: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0122:                     <p>
+   ↳ É um parágrafo de texto.
+
+LINHA 0123: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0124:                         Mais praticidade e liberdade
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0125: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0126:                         para o seu dia a dia.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0127:                     </p>
+   ↳ Fecha o elemento p que foi aberto antes.
+
+LINHA 0128: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0129:                 </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0130: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0131:                 <!-- SEGURANÇA -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0132:                 <div class="card">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0133: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0134:                     <img src="img/icone-seguranca.png" alt="Segurança" class="icone-img">
+   ↳ Mostra uma imagem; src diz onde ela está; class liga ele aos estilos do CSS.
+
+LINHA 0135: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0136:                     <h3>Segurança avançada</h3>
+   ↳ É um título menor.
+
+LINHA 0137: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0138:                     <p>
+   ↳ É um parágrafo de texto.
+
+LINHA 0139: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0140:                         Seus dados e seu dinheiro
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0141: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0142:                         sempre protegidos.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0143:                     </p>
+   ↳ Fecha o elemento p que foi aberto antes.
+
+LINHA 0144: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0145:                 </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0146: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0147:                 <!-- SUPORTE -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0148:                 <div class="card">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0149: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0150:                     <img src="img/icone-suporte.png" alt="Suporte" class="icone-img">
+   ↳ Mostra uma imagem; src diz onde ela está; class liga ele aos estilos do CSS.
+
+LINHA 0151: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0152:                     <h3>Suporte 24/7</h3>
+   ↳ É um título menor.
+
+LINHA 0153: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0154:                     <p>
+   ↳ É um parágrafo de texto.
+
+LINHA 0155: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0156:                         Estamos sempre aqui
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0157: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0158:                         para te ajudar.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0159:                     </p>
+   ↳ Fecha o elemento p que foi aberto antes.
+
+LINHA 0160: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0161:                 </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0162: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0163:             </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0164: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0165:         </section>
+   ↳ Fecha o elemento section que foi aberto antes.
+
+LINHA 0166: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0167: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0168:         <!-- SEGURANÇA -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0169:         <section class="seguranca" id="seguranca">
+   ↳ Separa uma área importante da página; class liga ele aos estilos do CSS; id identifica esse elemento.
+
+LINHA 0170: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0171:             <!-- IMAGEM DE SEGURANÇA -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0172:             <img src="img/seguranca.png" alt="Segurança ARO">
+   ↳ Mostra uma imagem; src diz onde ela está.
+
+LINHA 0173: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0174:             <div>
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS.
+
+LINHA 0175: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0176:                 <h4>SEGURANÇA</h4>
+   ↳ Esse elemento HTML h4 monta uma parte da página.
+
+LINHA 0177: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0178:                 <h2>
+   ↳ É um subtítulo da página.
+
+LINHA 0179: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0180:                     Seus dados e seu dinheiro
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0181: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0182:                     sempre protegidos.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0183:                 </h2>
+   ↳ Fecha o elemento h2 que foi aberto antes.
+
+LINHA 0184: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0185:                 <p>
+   ↳ É um parágrafo de texto.
+
+LINHA 0186: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0187:                     Utilizamos as mais modernas tecnologias
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0188: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0189:                     de segurança para garantir que suas
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0190: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0191:                     informações e transações estejam sempre
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0192: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0193:                     protegidas, 24 horas por dia.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0194:                 </p>
+   ↳ Fecha o elemento p que foi aberto antes.
+
+LINHA 0195: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0196:             </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0197: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0198:         </section>
+   ↳ Fecha o elemento section que foi aberto antes.
+
+LINHA 0199: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0200: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0201:         <!-- PRATICIDADE -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0202:         <section class="praticidade" id="praticidade">
+   ↳ Separa uma área importante da página; class liga ele aos estilos do CSS; id identifica esse elemento.
+
+LINHA 0203: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0204:             <div>
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS.
+
+LINHA 0205: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0206:                 <h4>PRATICIDADE</h4>
+   ↳ Esse elemento HTML h4 monta uma parte da página.
+
+LINHA 0207: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0208:                 <h2>
+   ↳ É um subtítulo da página.
+
+LINHA 0209: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0210:                     Tudo na palma da sua mão.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0211:                 </h2>
+   ↳ Fecha o elemento h2 que foi aberto antes.
+
+LINHA 0212: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0213:                 <p>
+   ↳ É um parágrafo de texto.
+
+LINHA 0214: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0215:                     Acesse sua conta, faça transferências,
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0216: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0217:                     pague contas e acompanhe seus gastos,
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0218: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0219:                     de onde estiver.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0220:                 </p>
+   ↳ Fecha o elemento p que foi aberto antes.
+
+LINHA 0221: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0222:             </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0223: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0224:             <!-- IMAGEM DO APLICATIVO -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0225:             <img src="img/celular.png" alt="Aplicativo ARO">
+   ↳ Mostra uma imagem; src diz onde ela está.
+
+LINHA 0226: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0227:         </section>
+   ↳ Fecha o elemento section que foi aberto antes.
+
+LINHA 0228: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0229: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0230:         <!-- CHAMADA FINAL -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0231:         <section class="final">
+   ↳ Separa uma área importante da página; class liga ele aos estilos do CSS.
+
+LINHA 0232: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0233:             <div>
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS.
+
+LINHA 0234: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0235:                 <h2>
+   ↳ É um subtítulo da página.
+
+LINHA 0236: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0237:                     PRONTO PARA LEVAR SEU
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0238: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0239:                     DINHEIRO MAIS LONGE?
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0240:                 </h2>
+   ↳ Fecha o elemento h2 que foi aberto antes.
+
+LINHA 0241: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0242:                 <p>
+   ↳ É um parágrafo de texto.
+
+LINHA 0243: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0244:                     Abra sua conta para empreendedores
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0245: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0246:                     e comece a fazer suas finanças com o ARO.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0247:                 </p>
+   ↳ Fecha o elemento p que foi aberto antes.
+
+LINHA 0248: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0249:             </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0250: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0251:             <a href="/cadastro" class="botao-final">
+   ↳ Cria um link clicável para outra página; class liga ele aos estilos do CSS.
+
+LINHA 0252: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0253:                 Começar agora →
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0254:             </a>
+   ↳ Fecha o elemento a que foi aberto antes.
+
+LINHA 0255: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0256:         </section>
+   ↳ Fecha o elemento section que foi aberto antes.
+
+LINHA 0257: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0258:     </main>
+   ↳ Fecha o elemento main que foi aberto antes.
+
+LINHA 0259: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0260: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0261:     <!-- RODAPÉ -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0262:     <footer>
+   ↳ É o rodapé.
+
+LINHA 0263: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0264:         <!-- LINKS DO RODAPÉ -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0265:         <div class="links">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0266: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0267:             <a href="#inicio">Para você</a>
+   ↳ Cria um link clicável para outra página.
+
+LINHA 0268:             <a href="#solucoes">Soluções</a>
+   ↳ Cria um link clicável para outra página.
+
+LINHA 0269:             <a href="#seguranca">Segurança</a>
+   ↳ Cria um link clicável para outra página.
+
+LINHA 0270:             <a href="#praticidade">Praticidade</a>
+   ↳ Cria um link clicável para outra página.
+
+LINHA 0271: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0272:         </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0273: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0274:         <!-- INFORMAÇÕES -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0275:         <p>
+   ↳ É um parágrafo de texto.
+
+LINHA 0276: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0277:             Termos de uso | Política de privacidade
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0278:         </p>
+   ↳ Fecha o elemento p que foi aberto antes.
+
+LINHA 0279: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0280:         <!-- DIREITOS AUTORAIS -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0281:         <h4>
+   ↳ Esse elemento HTML h4 monta uma parte da página.
+
+LINHA 0282: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0283:             © 2026 ARO. Todos os direitos reservados.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0284:         </h4>
+   ↳ Fecha o elemento h4 que foi aberto antes.
+
+LINHA 0285: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0286:     </footer>
+   ↳ Fecha o elemento footer que foi aberto antes.
+
+LINHA 0287: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0288: </body>
+   ↳ Fecha o elemento body que foi aberto antes.
+
+LINHA 0289: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0290: </html>
+   ↳ Fecha o elemento html que foi aberto antes.

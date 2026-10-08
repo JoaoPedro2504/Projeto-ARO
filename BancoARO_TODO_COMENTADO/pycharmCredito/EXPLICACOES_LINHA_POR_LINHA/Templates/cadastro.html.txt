@@ -1,0 +1,588 @@
+# Explicação do arquivo Templates/cadastro.html
+
+Aqui está o código original, linha por linha, com a explicação do lado. O projeto em si também recebe comentários onde não atrapalha.
+
+LINHA 0001: <!DOCTYPE html>
+   ↳ Isso avisa ao navegador que essa página usa HTML moderno.
+
+LINHA 0002: <html lang="pt-BR">
+   ↳ É o começo da página HTML; lang indica o idioma.
+
+LINHA 0003: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0004: <head>
+   ↳ É a parte das configurações, que não aparece como conteúdo principal.
+
+LINHA 0005:     <!-- Define a codificação dos caracteres da página -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0006:     <meta charset="UTF-8">
+   ↳ Passa uma configuração para o navegador, como caracteres e adaptação ao celular.
+
+LINHA 0007: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0008:     <!-- Faz a página se adaptar a celulares e tablets -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0009:     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   ↳ Passa uma configuração para o navegador, como caracteres e adaptação ao celular; name é a chave que chega no request.form do Flask.
+
+LINHA 0010: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0011:     <!-- Título que aparece na aba do navegador -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0012:     <title>Criar conta</title>
+   ↳ É o nome que aparece na aba do navegador.
+
+LINHA 0013: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0014:     <!-- Conecta o arquivo CSS externo -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0015:     <link rel="stylesheet" href="static/css/cadastro.css">
+   ↳ Liga esse HTML ao CSS externo.
+
+LINHA 0016: </head>
+   ↳ Fecha o elemento head que foi aberto antes.
+
+LINHA 0017: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0018: <body>
+   ↳ Aqui começa o que aparece na tela.
+
+LINHA 0019: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0020:         {% with messages = get_flashed_messages(with_categories=true) %}
+   ↳ Esse comando do Jinja/Flask controla o que aparece na página, como condição, repetição ou mensagens.
+
+LINHA 0021:                    {% if messages %}
+   ↳ Esse comando do Jinja/Flask controla o que aparece na página, como condição, repetição ou mensagens.
+
+LINHA 0022:             <div class="flash-messages">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0023:                            {% for category, message in messages %}
+   ↳ Esse comando do Jinja/Flask controla o que aparece na página, como condição, repetição ou mensagens.
+
+LINHA 0024:             <div class="flash {{ category }}">{{ message }}</div>
+   ↳ Os dois pares de chaves pedem para o Flask/Jinja colocar aqui um valor vindo do Python ou montar uma rota.
+
+LINHA 0025:                            {% endfor %}
+   ↳ Esse comando do Jinja/Flask controla o que aparece na página, como condição, repetição ou mensagens.
+
+LINHA 0026:             </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0027:                    {% endif %}
+   ↳ Esse comando do Jinja/Flask controla o que aparece na página, como condição, repetição ou mensagens.
+
+LINHA 0028:                {% endwith %}
+   ↳ Esse comando do Jinja/Flask controla o que aparece na página, como condição, repetição ou mensagens.
+
+LINHA 0029: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0030:     <!-- =====================================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0031:          CONTAINER PRINCIPAL
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0032:          ===================================================== -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0033: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0034:     <!-- Área que contém todo o formulário -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0035:     <main class="pagina">
+   ↳ Marca a parte principal da tela; class liga ele aos estilos do CSS.
+
+LINHA 0036: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0037:         <!-- =================================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0038:              CARD DO FORMULÁRIO
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0039:              ================================================= -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0040: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0041:         <section class="card">
+   ↳ Separa uma área importante da página; class liga ele aos estilos do CSS.
+
+LINHA 0042: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0043:             <!-- Ícone de criação de usuário -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0044:             <div class="icone-conta">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0045:                 <span>👤</span>
+   ↳ Marca um pedacinho de texto para formatar.
+
+LINHA 0046:                 <strong>+</strong>
+   ↳ Dá destaque ao texto, normalmente deixando em negrito.
+
+LINHA 0047:             </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0048: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0049:             <!-- Título principal -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0050:             <h1>Criar conta</h1>
+   ↳ É o título mais importante da página.
+
+LINHA 0051: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0052:             <!-- Texto de apresentação -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0053:             <p class="descricao">
+   ↳ É um parágrafo de texto; class liga ele aos estilos do CSS.
+
+LINHA 0054:                 Preencha seus dados para calibrar sua
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0055:                 capacidade de pagamento com precisão analítica.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0056:             </p>
+   ↳ Fecha o elemento p que foi aberto antes.
+
+LINHA 0057: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0058: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0059:             <!-- =================================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0060:                  FORMULÁRIO
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0061:                  ================================================= -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0062: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0063:             {% with mensagens = get_flashed_messages() %}{% if mensagens %}<div class="mensagens">{% for mensagem in mensagens %}<p>{{ mensagem }}</p>{% endfor %}</div>{% endif %}{% endwith %}
+   ↳ Esse comando do Jinja/Flask controla o que aparece na página, como condição, repetição ou mensagens.
+
+LINHA 0064:             <form action="{{ url_for('cadastro') }}" method="POST">
+   ↳ Os dois pares de chaves pedem para o Flask/Jinja colocar aqui um valor vindo do Python ou montar uma rota.
+
+LINHA 0065: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0066:                 <!-- Campo para nome completo -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0067:                 <div class="campo">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0068: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0069:                     <!-- Texto que identifica o campo -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0070:                     <label for="nome">Nome completo</label>
+   ↳ É o nome que explica o campo de digitação.
+
+LINHA 0071: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0072:                     <!-- Campo de entrada do nome -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0073:                     <input type="text" id="nome" name="nome" placeholder="Ex: Carlos Eduardo Silveira" required>
+   ↳ Cria um campo para a pessoa preencher; id identifica esse elemento; name é a chave que chega no request.form do Flask.
+
+LINHA 0074: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0075:                 </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0076: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0077: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0078:                 <!-- Campo para e-mail -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0079:                 <div class="campo">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0080: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0081:                     <!-- Texto que identifica o campo -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0082:                     <label for="email">E-mail corporativo ou pessoal</label>
+   ↳ É o nome que explica o campo de digitação.
+
+LINHA 0083: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0084:                     <!-- Campo de entrada do e-mail -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0085:                     <input type="email" id="email" name="email" placeholder="carlos@exemplo.com.br" required>
+   ↳ Cria um campo para a pessoa preencher; id identifica esse elemento; name é a chave que chega no request.form do Flask.
+
+LINHA 0086: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0087:                 </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0088: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0089: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0090:                 <!-- Campo para senha -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0091:                 <div class="campo">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0092: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0093:                     <!-- Texto que identifica o campo -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0094:                     <label for="senha">Senha de acesso</label>
+   ↳ É o nome que explica o campo de digitação.
+
+LINHA 0095: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0096:                     <!-- Campo de senha -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0097:                     <input type="password" id="senha" name="senha" placeholder="••••••••••••" required>
+   ↳ Cria um campo para a pessoa preencher; id identifica esse elemento; name é a chave que chega no request.form do Flask.
+
+LINHA 0098: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0099:                 </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0100: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0101: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0102:                 <!-- =================================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0103:                      SEPARADOR
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0104:                      ================================================= -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0105: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0106:                 <!-- Linha visual que separa os dados pessoais
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0107:                      dos dados financeiros -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0108:                 <div class="separador"></div>
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0109: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0110: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0111:                 <!-- =================================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0112:                      PARÂMETROS FINANCEIROS
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0113:                      ================================================= -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0114: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0115:                 <!-- Título da seção financeira -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0116:                 <h2>PARÂMETROS FINANCEIROS INICIAIS</h2>
+   ↳ É um subtítulo da página.
+
+LINHA 0117: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0118: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0119:                 <!-- Campo de renda mensal -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0120:                 <div class="campo">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0121: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0122:                     <!-- Identificação do campo -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0123:                     <label for="renda">Renda mensal líquida</label>
+   ↳ É o nome que explica o campo de digitação.
+
+LINHA 0124: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0125:                     <!-- Campo para informar a renda -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0126:                     <input type="text" id="renda" name="renda" placeholder="R$ 0,00" required>
+   ↳ Cria um campo para a pessoa preencher; id identifica esse elemento; name é a chave que chega no request.form do Flask.
+
+LINHA 0127: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0128:                 </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0129: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0130: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0131:                 <!-- Campo de despesas -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0132:                 <div class="campo">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0133: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0134:                     <!-- Identificação do campo -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0135:                     <label for="despesas">Despesas fixas mês</label>
+   ↳ É o nome que explica o campo de digitação.
+
+LINHA 0136: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0137:                     <!-- Campo para informar as despesas -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0138:                     <input type="text" id="despesas" name="despesas" placeholder="R$ 0,00" required>
+   ↳ Cria um campo para a pessoa preencher; id identifica esse elemento; name é a chave que chega no request.form do Flask.
+
+LINHA 0139: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0140:                 </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0141: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0142: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0143:                 <!-- =================================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0144:                      AVISO DE SEGURANÇA E LGPD
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0145:                      ================================================= -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0146: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0147:                 <!-- Caixa contendo a mensagem de proteção dos dados -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0148:                 <div class="aviso-seguranca">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0149: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0150:                     <p>
+   ↳ É um parágrafo de texto.
+
+LINHA 0151:                         Seus dados estão protegidos de acordo
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0152:                         com as normas da LGPD e utilizados
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0153:                         unicamente para análise de risco
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0154:                         ponderado.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0155:                     </p>
+   ↳ Fecha o elemento p que foi aberto antes.
+
+LINHA 0156: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0157:                 </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0158: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0159: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0160:                 <!-- =================================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0161:                      BOTÃO DE CADASTRO
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0162:                      ================================================= -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0163: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0164:                 <!-- Botão responsável pelo envio do formulário -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0165:                 <button type="submit" class="botao-cadastrar">Cadastrar &gt;</button>
+   ↳ Cria um botão; type define o que ele faz; class liga ele aos estilos do CSS.
+
+LINHA 0166: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0167:             </form>
+   ↳ Fecha o elemento form que foi aberto antes.
+
+LINHA 0168: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0169:         </section>
+   ↳ Fecha o elemento section que foi aberto antes.
+
+LINHA 0170: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0171: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0172:         <!-- =====================================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0173:              RODAPÉ
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0174:              ===================================================== -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0175: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0176:         <footer>
+   ↳ É o rodapé.
+
+LINHA 0177: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0178:             <!-- Informação sobre criptografia -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0179:             <span>
+   ↳ Marca um pedacinho de texto para formatar.
+
+LINHA 0180:                 Criptografia ponta a<br>
+   ↳ Esse elemento HTML br monta uma parte da página.
+
+LINHA 0181:                 ponta
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0182:             </span>
+   ↳ Fecha o elemento span que foi aberto antes.
+
+LINHA 0183: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0184:             <!-- Identificação do banco -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0185:             <span>
+   ↳ Marca um pedacinho de texto para formatar.
+
+LINHA 0186:                 Banco Central do Brasil
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0187:             </span>
+   ↳ Fecha o elemento span que foi aberto antes.
+
+LINHA 0188: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0189:         </footer>
+   ↳ Fecha o elemento footer que foi aberto antes.
+
+LINHA 0190: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0191:     </main>
+   ↳ Fecha o elemento main que foi aberto antes.
+
+LINHA 0192: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0193: </body>
+   ↳ Fecha o elemento body que foi aberto antes.
+
+LINHA 0194: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0195: </html>
+   ↳ Fecha o elemento html que foi aberto antes.

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!-- É o começo da página HTML; lang indica o idioma. -->
+<html lang="pt-BR">
+
+<!-- É a parte das configurações, que não aparece como conteúdo principal. -->
+<head>
+
+    <!-- Define a codificação de caracteres da página -->
+    <!-- Passa uma configuração para o navegador, como caracteres e adaptação ao celular. -->
+    <meta charset="UTF-8">
+
+    <!-- Faz a página se adaptar a celulares e tablets -->
+    <!-- Passa uma configuração para o navegador, como caracteres e adaptação ao celular; name é a chave que chega no request.form do Flask. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Nome que aparece na aba do navegador -->
+    <title>Entrar | ARO</title>
+
+    <!-- Conecta o HTML ao arquivo CSS -->
+    <!-- Liga esse HTML ao CSS externo. -->
+    <link rel="stylesheet" href="static/css/login.css">
+
+<!-- Fecha o elemento head que foi aberto antes. -->
+</head>
+
+
+<!-- Aqui começa o que aparece na tela. -->
+<body>
+
+    <!-- =====================================================
+         CONTAINER PRINCIPAL
+         Contém o logo e o formulário de login
+         ===================================================== -->
+
+    <!-- Marca a parte principal da tela; class liga ele aos estilos do CSS. -->
+    <main class="pagina-login">
+
+
+        <!-- =================================================
+             ÁREA DO LOGO
+             ================================================= -->
+
+        <!-- Separa uma área importante da página; class liga ele aos estilos do CSS. -->
+        <section class="area-logo">
+
+            <!--
+                Imagem do logo ARO.
+
+                O arquivo deve estar em:
+                static/img/logo-aro.png
+            -->
+
+            <img src="{{ url_for('static', filename='img/logo-aro.png') }}" alt="Logo ARO" class="logo-aro">
+
+        <!-- Fecha o elemento section que foi aberto antes. -->
+        </section>
+
+
+        <!-- =================================================
+             ÁREA DO LOGIN
+             ================================================= -->
+
+        <!-- Separa uma área importante da página; class liga ele aos estilos do CSS. -->
+        <section class="area-login">
+
+
+            <!-- =============================================
+                 CARD DO LOGIN
+                 ============================================= -->
+
+            <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+            <div class="card-login">
+
+
+                <!-- =========================================
+                     CABEÇALHO
+                     ========================================= -->
+
+                <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+                <div class="cabecalho-login">
+
+                    <!-- Título principal -->
+                    <h1>Entre na sua conta</h1>
+
+                    <!-- Texto explicativo -->
+                    <!-- É um parágrafo de texto. -->
+                    <p>
+                        Informe seus dados de acesso abaixo para prosseguir.
+                    <!-- Fecha o elemento p que foi aberto antes. -->
+                    </p>
+
+                <!-- Fecha o elemento div que foi aberto antes. -->
+                </div>
+
+
+                <!-- =========================================
+                     FORMULÁRIO
+                     ========================================= -->
+
+                <!-- Cria o formulário que envia dados para o Flask; class liga ele aos estilos do CSS. -->
+                <form action="/login" method="POST" class="form-login">
+
+
+                    <!-- =====================================
+                         CAMPO DE E-MAIL
+                         ===================================== -->
+
+                    <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+                    <div class="campo">
+
+                        <!-- É o nome que explica o campo de digitação. -->
+                        <label for="email">
+                            E-mail
+                        <!-- Fecha o elemento label que foi aberto antes. -->
+                        </label>
+
+                        <!-- Cria um campo para a pessoa preencher; id identifica esse elemento; name é a chave que chega no request.form do Flask. -->
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+                    <!-- Fecha o elemento div que foi aberto antes. -->
+                    </div>
+
+
+                    <!-- =====================================
+                         CAMPO DE SENHA
+                         ===================================== -->
+
+                    <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+                    <div class="campo">
+
+                        <!-- É o nome que explica o campo de digitação. -->
+                        <label for="senha">
+                            Senha
+                        <!-- Fecha o elemento label que foi aberto antes. -->
+                        </label>
+
+                        <!-- Cria um campo para a pessoa preencher; id identifica esse elemento; name é a chave que chega no request.form do Flask. -->
+                        <input type="password" id="senha" name="senha" placeholder="••••••••" required>
+
+                    <!-- Fecha o elemento div que foi aberto antes. -->
+                    </div>
+
+                    <!-- =====================================
+                         MENSAGENS DO FLASK
+                         ===================================== -->
+
+                    {% with mensagens = get_flashed_messages() %}
+
+                    {% if mensagens %}
+
+                    <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+                    <div class="mensagens">
+
+                        {% for mensagem in mensagens %}
+
+                        <p>{{ mensagem }}</p>
+
+                        {% endfor %}
+
+                    <!-- Fecha o elemento div que foi aberto antes. -->
+                    </div>
+
+                    {% endif %}
+
+                    {% endwith %}
+
+
+                    <!-- =====================================
+                         BOTÃO DE LOGIN
+                         ===================================== -->
+
+                    <!-- Cria um botão; type define o que ele faz; class liga ele aos estilos do CSS. -->
+                    <button type="submit" class="botao-login">
+                        ENTRAR NA MINHA CONTA
+                    <!-- Fecha o elemento button que foi aberto antes. -->
+                    </button>
+
+
+                <!-- Fecha o elemento form que foi aberto antes. -->
+                </form>
+
+
+            <!-- Fecha o elemento div que foi aberto antes. -->
+            </div>
+
+
+            <!-- =============================================
+                 CRIAR CONTA
+                 ============================================= -->
+
+            <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+            <div class="criar-conta">
+
+                <!-- É um parágrafo de texto. -->
+                <p>
+                    Ainda não possui uma conta?
+                <!-- Fecha o elemento p que foi aberto antes. -->
+                </p>
+
+                <!--
+                    Leva o usuário para a página de cadastro.
+                -->
+
+                <a href="{{ url_for('cadastro') }}">
+                    Criar uma conta
+                <!-- Fecha o elemento a que foi aberto antes. -->
+                </a>
+
+            <!-- Fecha o elemento div que foi aberto antes. -->
+            </div>
+
+
+            <!-- =============================================
+                 AVISO DE SEGURANÇA
+                 ============================================= -->
+
+            <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+            <div class="seguranca">
+
+                <!-- Ícone de cadeado -->
+                <span class="cadeado">♙</span>
+
+                <!-- Marca um pedacinho de texto para formatar. -->
+                <span>
+                    Ambiente seguro com criptografia 256-bit
+                <!-- Fecha o elemento span que foi aberto antes. -->
+                </span>
+
+            <!-- Fecha o elemento div que foi aberto antes. -->
+            </div>
+
+
+        <!-- Fecha o elemento section que foi aberto antes. -->
+        </section>
+
+
+    <!-- Fecha o elemento main que foi aberto antes. -->
+    </main>
+
+
+<!-- Fecha o elemento body que foi aberto antes. -->
+</body>
+
+<!-- Fecha o elemento html que foi aberto antes. -->
+</html>

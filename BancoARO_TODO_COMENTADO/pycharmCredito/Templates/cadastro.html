@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!-- É o começo da página HTML; lang indica o idioma. -->
+<html lang="pt-BR">
+
+<!-- É a parte das configurações, que não aparece como conteúdo principal. -->
+<head>
+    <!-- Define a codificação dos caracteres da página -->
+    <!-- Passa uma configuração para o navegador, como caracteres e adaptação ao celular. -->
+    <meta charset="UTF-8">
+
+    <!-- Faz a página se adaptar a celulares e tablets -->
+    <!-- Passa uma configuração para o navegador, como caracteres e adaptação ao celular; name é a chave que chega no request.form do Flask. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece na aba do navegador -->
+    <title>Criar conta</title>
+
+    <!-- Conecta o arquivo CSS externo -->
+    <!-- Liga esse HTML ao CSS externo. -->
+    <link rel="stylesheet" href="static/css/cadastro.css">
+<!-- Fecha o elemento head que foi aberto antes. -->
+</head>
+
+<!-- Aqui começa o que aparece na tela. -->
+<body>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+                   {% if messages %}
+            <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+            <div class="flash-messages">
+                           {% for category, message in messages %}
+            <div class="flash {{ category }}">{{ message }}</div>
+                           {% endfor %}
+            <!-- Fecha o elemento div que foi aberto antes. -->
+            </div>
+                   {% endif %}
+               {% endwith %}
+
+    <!-- =====================================================
+         CONTAINER PRINCIPAL
+         ===================================================== -->
+
+    <!-- Área que contém todo o formulário -->
+    <!-- Marca a parte principal da tela; class liga ele aos estilos do CSS. -->
+    <main class="pagina">
+
+        <!-- =================================================
+             CARD DO FORMULÁRIO
+             ================================================= -->
+
+        <!-- Separa uma área importante da página; class liga ele aos estilos do CSS. -->
+        <section class="card">
+
+            <!-- Ícone de criação de usuário -->
+            <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+            <div class="icone-conta">
+                <span>👤</span>
+                <strong>+</strong>
+            <!-- Fecha o elemento div que foi aberto antes. -->
+            </div>
+
+            <!-- Título principal -->
+            <h1>Criar conta</h1>
+
+            <!-- Texto de apresentação -->
+            <!-- É um parágrafo de texto; class liga ele aos estilos do CSS. -->
+            <p class="descricao">
+                Preencha seus dados para calibrar sua
+                capacidade de pagamento com precisão analítica.
+            <!-- Fecha o elemento p que foi aberto antes. -->
+            </p>
+
+
+            <!-- =================================================
+                 FORMULÁRIO
+                 ================================================= -->
+
+            {% with mensagens = get_flashed_messages() %}{% if mensagens %}<div class="mensagens">{% for mensagem in mensagens %}<p>{{ mensagem }}</p>{% endfor %}</div>{% endif %}{% endwith %}
+            <form action="{{ url_for('cadastro') }}" method="POST">
+
+                <!-- Campo para nome completo -->
+                <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+                <div class="campo">
+
+                    <!-- Texto que identifica o campo -->
+                    <label for="nome">Nome completo</label>
+
+                    <!-- Campo de entrada do nome -->
+                    <!-- Cria um campo para a pessoa preencher; id identifica esse elemento; name é a chave que chega no request.form do Flask. -->
+                    <input type="text" id="nome" name="nome" placeholder="Ex: Carlos Eduardo Silveira" required>
+
+                <!-- Fecha o elemento div que foi aberto antes. -->
+                </div>
+
+
+                <!-- Campo para e-mail -->
+                <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+                <div class="campo">
+
+                    <!-- Texto que identifica o campo -->
+                    <label for="email">E-mail corporativo ou pessoal</label>
+
+                    <!-- Campo de entrada do e-mail -->
+                    <!-- Cria um campo para a pessoa preencher; id identifica esse elemento; name é a chave que chega no request.form do Flask. -->
+                    <input type="email" id="email" name="email" placeholder="carlos@exemplo.com.br" required>
+
+                <!-- Fecha o elemento div que foi aberto antes. -->
+                </div>
+
+
+                <!-- Campo para senha -->
+                <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+                <div class="campo">
+
+                    <!-- Texto que identifica o campo -->
+                    <label for="senha">Senha de acesso</label>
+
+                    <!-- Campo de senha -->
+                    <!-- Cria um campo para a pessoa preencher; id identifica esse elemento; name é a chave que chega no request.form do Flask. -->
+                    <input type="password" id="senha" name="senha" placeholder="••••••••••••" required>
+
+                <!-- Fecha o elemento div que foi aberto antes. -->
+                </div>
+
+
+                <!-- =================================================
+                     SEPARADOR
+                     ================================================= -->
+
+                <!-- Linha visual que separa os dados pessoais
+                     dos dados financeiros -->
+                <div class="separador"></div>
+
+
+                <!-- =================================================
+                     PARÂMETROS FINANCEIROS
+                     ================================================= -->
+
+                <!-- Título da seção financeira -->
+                <h2>PARÂMETROS FINANCEIROS INICIAIS</h2>
+
+
+                <!-- Campo de renda mensal -->
+                <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+                <div class="campo">
+
+                    <!-- Identificação do campo -->
+                    <label for="renda">Renda mensal líquida</label>
+
+                    <!-- Campo para informar a renda -->
+                    <!-- Cria um campo para a pessoa preencher; id identifica esse elemento; name é a chave que chega no request.form do Flask. -->
+                    <input type="text" id="renda" name="renda" placeholder="R$ 0,00" required>
+
+                <!-- Fecha o elemento div que foi aberto antes. -->
+                </div>
+
+
+                <!-- Campo de despesas -->
+                <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+                <div class="campo">
+
+                    <!-- Identificação do campo -->
+                    <label for="despesas">Despesas fixas mês</label>
+
+                    <!-- Campo para informar as despesas -->
+                    <!-- Cria um campo para a pessoa preencher; id identifica esse elemento; name é a chave que chega no request.form do Flask. -->
+                    <input type="text" id="despesas" name="despesas" placeholder="R$ 0,00" required>
+
+                <!-- Fecha o elemento div que foi aberto antes. -->
+                </div>
+
+
+                <!-- =================================================
+                     AVISO DE SEGURANÇA E LGPD
+                     ================================================= -->
+
+                <!-- Caixa contendo a mensagem de proteção dos dados -->
+                <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+                <div class="aviso-seguranca">
+
+                    <!-- É um parágrafo de texto. -->
+                    <p>
+                        Seus dados estão protegidos de acordo
+                        com as normas da LGPD e utilizados
+                        unicamente para análise de risco
+                        ponderado.
+                    <!-- Fecha o elemento p que foi aberto antes. -->
+                    </p>
+
+                <!-- Fecha o elemento div que foi aberto antes. -->
+                </div>
+
+
+                <!-- =================================================
+                     BOTÃO DE CADASTRO
+                     ================================================= -->
+
+                <!-- Botão responsável pelo envio do formulário -->
+                <button type="submit" class="botao-cadastrar">Cadastrar &gt;</button>
+
+            <!-- Fecha o elemento form que foi aberto antes. -->
+            </form>
+
+        <!-- Fecha o elemento section que foi aberto antes. -->
+        </section>
+
+
+        <!-- =====================================================
+             RODAPÉ
+             ===================================================== -->
+
+        <!-- É o rodapé. -->
+        <footer>
+
+            <!-- Informação sobre criptografia -->
+            <!-- Marca um pedacinho de texto para formatar. -->
+            <span>
+                Criptografia ponta a<br>
+                ponta
+            <!-- Fecha o elemento span que foi aberto antes. -->
+            </span>
+
+            <!-- Identificação do banco -->
+            <!-- Marca um pedacinho de texto para formatar. -->
+            <span>
+                Banco Central do Brasil
+            <!-- Fecha o elemento span que foi aberto antes. -->
+            </span>
+
+        <!-- Fecha o elemento footer que foi aberto antes. -->
+        </footer>
+
+    <!-- Fecha o elemento main que foi aberto antes. -->
+    </main>
+
+<!-- Fecha o elemento body que foi aberto antes. -->
+</body>
+
+<!-- Fecha o elemento html que foi aberto antes. -->
+</html>

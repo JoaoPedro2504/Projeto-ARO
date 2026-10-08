@@ -1,0 +1,3441 @@
+# Explicação do arquivo Static/css/cadastro.css
+
+Aqui está o código original, linha por linha, com a explicação do lado. O projeto em si também recebe comentários onde não atrapalha.
+
+LINHA 0001: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0002:    IMPORTAÇÃO DA FONTE
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0003:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0004: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0005: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0006:    @import importa uma fonte externa do Google Fonts.
+   ↳ Aqui o CSS carrega uma fonte ou outro estilo de fora.
+
+LINHA 0007: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0008:    Aqui estamos importando a fonte Inter nos pesos:
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0009:    400 = normal
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0010:    500 = médio
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0011:    600 = semibold
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0012:    700 = negrito
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0013:    800 = negrito forte
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0014: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0015: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0016: @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+   ↳ Aqui o CSS carrega uma fonte ou outro estilo de fora.
+
+LINHA 0017: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0018: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0019: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0020:    RESET GERAL
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0021:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0022: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0023: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0024:    O seletor * seleciona TODOS os elementos da página.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0025: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0026: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0027: * {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor *.
+
+LINHA 0028: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0029:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0030:        Remove a margem padrão que o navegador coloca
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0031:        em elementos como títulos e parágrafos.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0032:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0033:     margin: 0;
+   ↳ É o espaço de fora da caixa, para afastar dos outros elementos. Aqui foi colocado 0. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0034: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0035:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0036:        Remove o espaçamento interno padrão dos elementos.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0037:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0038:     padding: 0;
+   ↳ É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 0. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0039: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0040:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0041:        Faz com que width e height incluam também
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0042:        o padding e a borda do elemento.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0043: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0044:        Isso facilita muito o controle dos tamanhos.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0045:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0046:     box-sizing: border-box;
+   ↳ Controla como largura, borda e padding entram no cálculo. Aqui foi colocado border-box. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0047: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0048: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0049: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0050: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0051:    BODY
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0052:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0053: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0054: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0055:    O body representa o corpo inteiro da página.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0056: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0057: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0058: body {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor body.
+
+LINHA 0059: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0060:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0061:        Define a fonte principal utilizada na página.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0062:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0063:     font-family: 'Inter', sans-serif;
+   ↳ Escolhe a fonte das letras. Aqui foi colocado 'Inter', sans-serif. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0064: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0065:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0066:        Define a cor de fundo da página.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0067: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0068:        O valor está bem próximo do branco,
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0069:        criando o fundo claro da imagem.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0070:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0071:     background-color: #faf9f8;
+   ↳ É a cor do fundo. Aqui foi colocado #faf9f8. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0072: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0073:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0074:        Define a cor padrão dos textos.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0075:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0076:     color: #222;
+   ↳ É a cor do texto. Aqui foi colocado #222. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0077: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0078:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0079:        Garante que o body tenha pelo menos
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0080:        a altura completa da tela.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0081:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0082:     min-height: 100vh;
+   ↳ Define a altura mínima. Aqui foi colocado 100vh. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0083: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0084: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0085: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0086: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0087:    CONTAINER PRINCIPAL
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0088:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0089: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0090: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0091:    .pagina é o elemento que envolve o card inteiro.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0092: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0093:    Ele é responsável por posicionar o formulário
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0094:    no centro da tela.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0095: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0096: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0097: .pagina {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .pagina.
+
+LINHA 0098: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0099:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0100:        Ocupa 100% da largura disponível.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0101:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0102:     width: 100%;
+   ↳ É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0103: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0104:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0105:        100vh significa "100% da altura da tela".
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0106: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0107:        Isso faz a área ocupar a tela inteira.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0108:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0109:     min-height: 100vh;
+   ↳ Define a altura mínima. Aqui foi colocado 100vh. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0110: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0111:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0112:        Ativa o sistema Flexbox.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0113: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0114:        Flexbox facilita o posicionamento dos elementos.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0115:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0116:     display: flex;
+   ↳ Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado flex. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0117: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0118:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0119:        Organiza os elementos verticalmente.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0120: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0121:        Ou seja:
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0122:        card
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0123:        depois footer
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0124:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0125:     flex-direction: column;
+   ↳ Define se os itens flex ficam em linha ou coluna. Aqui foi colocado column. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0126: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0127:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0128:        Centraliza os elementos horizontalmente.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0129:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0130:     align-items: center;
+   ↳ Alinha os itens no outro eixo. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0131: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0132:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0133:        Centraliza o conteúdo verticalmente.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0134:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0135:     justify-content: center;
+   ↳ Organiza os itens no eixo principal, tipo centralizar ou separar. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0136: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0137:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0138:        Cria espaço interno entre o conteúdo
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0139:        e as bordas da tela.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0140: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0141:        30px = cima/baixo
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0142:        20px = esquerda/direita
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0143:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0144:     padding: 30px 20px;
+   ↳ É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 30px 20px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0145: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0146: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0147: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0148: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0149:    CARD PRINCIPAL
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0150:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0151: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0152: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0153:    .card é a caixa branca que aparece no centro
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0154:    da página.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0155: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0156: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0157: .card {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .card.
+
+LINHA 0158: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0159:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0160:        Faz o card ocupar 100% da largura disponível,
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0161:        respeitando o limite definido em max-width.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0162:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0163:     width: 100%;
+   ↳ É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0164: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0165:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0166:        Impede que o card fique maior que 795px.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0167: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0168:        Isso mantém a proporção semelhante à imagem.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0169:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0170:     max-width: 795px;
+   ↳ Limita até onde a largura pode crescer. Aqui foi colocado 795px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0171: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0172:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0173:        Define a cor branca do card.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0174:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0175:     background-color: #ffffff;
+   ↳ É a cor do fundo. Aqui foi colocado #ffffff. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0176: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0177:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0178:        Cria espaço interno no card.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0179: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0180:        30px em cima e embaixo
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0181:        30px nas laterais
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0182:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0183:     padding: 30px 30px 25px;
+   ↳ É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 30px 30px 25px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0184: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0185:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0186:        Arredonda os cantos do card.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0187:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0188:     border-radius: 14px;
+   ↳ Arredonda os cantos. Aqui foi colocado 14px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0189: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0190:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0191:        Cria uma sombra suave atrás do card.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0192: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0193:        Os valores representam:
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0194:        0    = deslocamento horizontal
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0195:        5px  = deslocamento vertical
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0196:        25px = desfoque
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0197:        rgba = cor preta com transparência
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0198:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0199:     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+   ↳ Adiciona uma sombra. Aqui foi colocado 0 5px 25px rgba(0, 0, 0, 0.06). Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0200: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0201: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0202: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0203: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0204:    ÍCONE DO TOPO
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0205:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0206: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0207: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0208:    .icone-conta é o pequeno quadrado roxo
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0209:    que aparece acima do título.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0210: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0211: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0212: .icone-conta {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .icone-conta.
+
+LINHA 0213: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0214:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0215:        Define a largura do ícone.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0216:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0217:     width: 34px;
+   ↳ É a largura. Aqui foi colocado 34px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0218: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0219:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0220:        Define a altura do ícone.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0221:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0222:     height: 34px;
+   ↳ É a altura. Aqui foi colocado 34px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0223: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0224:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0225:        Centraliza o ícone horizontalmente.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0226: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0227:        0 = margem superior/inferior
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0228:        auto = centraliza horizontalmente
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0229:        6px = espaço abaixo do ícone
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0230:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0231:     margin: 0 auto 6px;
+   ↳ É o espaço de fora da caixa, para afastar dos outros elementos. Aqui foi colocado 0 auto 6px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0232: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0233:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0234:        Ativa o Flexbox.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0235:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0236:     display: flex;
+   ↳ Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado flex. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0237: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0238:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0239:        Centraliza o conteúdo verticalmente.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0240:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0241:     align-items: center;
+   ↳ Alinha os itens no outro eixo. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0242: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0243:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0244:        Centraliza o conteúdo horizontalmente.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0245:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0246:     justify-content: center;
+   ↳ Organiza os itens no eixo principal, tipo centralizar ou separar. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0247: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0248:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0249:        Permite posicionar elementos internos
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0250:        usando position: absolute.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0251:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0252:     position: relative;
+   ↳ Escolhe a maneira como o elemento se posiciona. Aqui foi colocado relative. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0253: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0254:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0255:        Arredonda os cantos do ícone.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0256:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0257:     border-radius: 10px;
+   ↳ Arredonda os cantos. Aqui foi colocado 10px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0258: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0259:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0260:        Define o fundo lilás do ícone.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0261:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0262:     background-color: #eee5ff;
+   ↳ É a cor do fundo. Aqui foi colocado #eee5ff. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0263: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0264: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0265: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0266: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0267:    SÍMBOLO PRINCIPAL DO ÍCONE
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0268:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0269: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0270: .icone-conta span {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .icone-conta span.
+
+LINHA 0271: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0272:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0273:        Define o tamanho do símbolo.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0274:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0275:     font-size: 17px;
+   ↳ É o tamanho das letras. Aqui foi colocado 17px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0276: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0277:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0278:        Define a cor roxa do símbolo.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0279:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0280:     color: #654096;
+   ↳ É a cor do texto. Aqui foi colocado #654096. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0281: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0282: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0283: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0284: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0285:    PEQUENO SÍMBOLO DO ÍCONE
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0286:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0287: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0288: .icone-conta strong {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .icone-conta strong.
+
+LINHA 0289: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0290:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0291:        Permite posicionar o símbolo
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0292:        em uma posição específica.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0293:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0294:     position: absolute;
+   ↳ Escolhe a maneira como o elemento se posiciona. Aqui foi colocado absolute. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0295: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0296:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0297:        Move o símbolo 5px para cima.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0298:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0299:     top: -5px;
+   ↳ É a distância a partir de cima. Aqui foi colocado -5px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0300: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0301:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0302:        Move o símbolo 4px para a direita.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0303:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0304:     right: -4px;
+   ↳ É a distância a partir da direita. Aqui foi colocado -4px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0305: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0306:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0307:        Define a cor do símbolo.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0308:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0309:     color: #654096;
+   ↳ É a cor do texto. Aqui foi colocado #654096. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0310: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0311:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0312:        Define o tamanho do símbolo.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0313:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0314:     font-size: 9px;
+   ↳ É o tamanho das letras. Aqui foi colocado 9px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0315: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0316: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0317: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0318: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0319:    TÍTULO "CRIAR CONTA"
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0320:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0321: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0322: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0323:    Seleciona o elemento h1 que está dentro do card.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0324: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0325: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0326: .card h1 {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .card h1.
+
+LINHA 0327: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0328:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0329:        Centraliza o título.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0330:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0331:     text-align: center;
+   ↳ Alinha o texto. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0332: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0333:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0334:        Define a cor roxa do título.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0335:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0336:     color: #604092;
+   ↳ É a cor do texto. Aqui foi colocado #604092. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0337: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0338:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0339:        Define o tamanho da letra.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0340:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0341:     font-size: 20px;
+   ↳ É o tamanho das letras. Aqui foi colocado 20px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0342: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0343:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0344:        Deixa o texto em negrito.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0345:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0346:     font-weight: 700;
+   ↳ Controla se a letra fica normal ou mais grossa. Aqui foi colocado 700. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0347: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0348:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0349:        Cria 7px de espaço abaixo do título.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0350:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0351:     margin-bottom: 7px;
+   ↳ Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 7px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0352: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0353: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0354: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0355: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0356:    DESCRIÇÃO
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0357:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0358: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0359: .descricao {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .descricao.
+
+LINHA 0360: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0361:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0362:        Centraliza o texto.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0363:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0364:     text-align: center;
+   ↳ Alinha o texto. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0365: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0366:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0367:        Define a cor cinza da descrição.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0368:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0369:     color: #89838d;
+   ↳ É a cor do texto. Aqui foi colocado #89838d. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0370: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0371:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0372:        Define o tamanho da fonte.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0373:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0374:     font-size: 9px;
+   ↳ É o tamanho das letras. Aqui foi colocado 9px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0375: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0376:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0377:        Define o espaçamento entre as linhas.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0378:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0379:     line-height: 1.5;
+   ↳ É a altura de cada linha de texto. Aqui foi colocado 1.5. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0380: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0381:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0382:        Cria espaço abaixo da descrição.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0383:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0384:     margin-bottom: 22px;
+   ↳ Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 22px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0385: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0386: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0387: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0388: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0389:    FORMULÁRIO
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0390:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0391: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0392: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0393:    O formulário ocupa toda a largura disponível
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0394:    dentro do card.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0395: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0396: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0397: form {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor form.
+
+LINHA 0398: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0399:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0400:        Faz o formulário ocupar 100% da largura.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0401:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0402:     width: 100%;
+   ↳ É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0403: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0404: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0405: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0406: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0407:    LINHA COM DOIS CAMPOS
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0408:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0409: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0410: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0411:    .linha é utilizada para colocar dois campos
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0412:    lado a lado.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0413: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0414:    Exemplo:
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0415:    E-mail       Senha
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0416:    [campo]      [campo]
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0417: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0418: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0419: .linha {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .linha.
+
+LINHA 0420: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0421:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0422:        Ocupa toda a largura disponível.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0423:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0424:     width: 100%;
+   ↳ É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0425: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0426:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0427:        Ativa o Flexbox.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0428:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0429:     display: flex;
+   ↳ Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado flex. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0430: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0431:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0432:        Alinha os campos pelo topo.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0433:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0434:     align-items: flex-start;
+   ↳ Alinha os itens no outro eixo. Aqui foi colocado flex-start. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0435: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0436:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0437:        Cria 10px de espaço entre os dois campos.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0438:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0439:     gap: 10px;
+   ↳ É a distância entre os elementos. Aqui foi colocado 10px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0440: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0441: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0442: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0443: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0444:    TAMANHO DOS CAMPOS DENTRO DA LINHA
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0445:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0446: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0447: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0448:    Cada campo ocupa metade da largura da linha.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0449: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0450: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0451: .linha .campo {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .linha .campo.
+
+LINHA 0452: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0453:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0454:        50% significa metade da largura disponível.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0455:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0456:     width: 50%;
+   ↳ É a largura. Aqui foi colocado 50%. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0457: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0458: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0459: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0460: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0461:    CAMPO INDIVIDUAL
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0462:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0463: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0464: .campo {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .campo.
+
+LINHA 0465: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0466:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0467:        Faz o campo ocupar toda a largura disponível.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0468:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0469:     width: 100%;
+   ↳ É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0470: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0471:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0472:        Cria espaço abaixo de cada campo.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0473:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0474:     margin-bottom: 14px;
+   ↳ Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 14px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0475: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0476: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0477: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0478: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0479:    LABEL
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0480:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0481: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0482: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0483:    Label é o texto que fica acima do input.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0484: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0485:    Exemplo:
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0486:    Nome completo
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0487:    [Digite seu nome]
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0488: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0489: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0490: .campo label {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .campo label.
+
+LINHA 0491: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0492:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0493:        Faz o label ocupar uma linha inteira.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0494:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0495:     display: block;
+   ↳ Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado block. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0496: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0497:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0498:        Define a cor do texto.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0499:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0500:     color: #202020;
+   ↳ É a cor do texto. Aqui foi colocado #202020. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0501: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0502:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0503:        Define o tamanho da fonte.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0504:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0505:     font-size: 8px;
+   ↳ É o tamanho das letras. Aqui foi colocado 8px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0506: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0507:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0508:        Deixa o texto em negrito.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0509:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0510:     font-weight: 700;
+   ↳ Controla se a letra fica normal ou mais grossa. Aqui foi colocado 700. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0511: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0512:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0513:        Cria espaço entre o label e o input.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0514:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0515:     margin-bottom: 6px;
+   ↳ Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 6px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0516: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0517: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0518: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0519: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0520:    INPUT
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0521:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0522: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0523: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0524:    Define a aparência dos campos onde
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0525:    o usuário digita as informações.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0526: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0527: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0528: .campo input {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .campo input.
+
+LINHA 0529: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0530:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0531:        Ocupa toda a largura disponível.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0532:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0533:     width: 100%;
+   ↳ É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0534: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0535:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0536:        Define a altura do campo.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0537:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0538:     height: 34px;
+   ↳ É a altura. Aqui foi colocado 34px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0539: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0540:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0541:        Remove a borda padrão do navegador.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0542:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0543:     border: none;
+   ↳ É a borda ao redor do elemento. Aqui foi colocado none. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0544: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0545:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0546:        Arredonda os cantos do campo.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0547:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0548:     border-radius: 6px;
+   ↳ Arredonda os cantos. Aqui foi colocado 6px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0549: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0550:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0551:        Define o fundo cinza claro.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0552:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0553:     background-color: #f0eeee;
+   ↳ É a cor do fundo. Aqui foi colocado #f0eeee. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0554: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0555:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0556:        Cria espaço interno.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0557: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0558:        0 = cima/baixo
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0559:        12px = esquerda/direita
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0560:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0561:     padding: 0 12px;
+   ↳ É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 0 12px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0562: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0563:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0564:        Define a cor do texto digitado.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0565:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0566:     color: #444;
+   ↳ É a cor do texto. Aqui foi colocado #444. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0567: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0568:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0569:        Mantém a mesma fonte utilizada no restante da página.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0570:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0571:     font-family: 'Inter', sans-serif;
+   ↳ Escolhe a fonte das letras. Aqui foi colocado 'Inter', sans-serif. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0572: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0573:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0574:        Define o tamanho do texto digitado.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0575:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0576:     font-size: 9px;
+   ↳ É o tamanho das letras. Aqui foi colocado 9px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0577: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0578:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0579:        Remove o contorno padrão do navegador.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0580:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0581:     outline: none;
+   ↳ É uma linha de destaque em volta do elemento. Aqui foi colocado none. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0582: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0583:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0584:        Faz alterações visuais acontecerem
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0585:        suavemente.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0586:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0587:     transition: 0.2s;
+   ↳ Faz mudanças de estilo acontecerem suavemente. Aqui foi colocado 0.2s. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0588: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0589: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0590: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0591: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0592:    PLACEHOLDER
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0593:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0594: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0595: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0596:    Placeholder é o texto de exemplo que aparece
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0597:    dentro do input antes do usuário digitar.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0598: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0599: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0600: .campo input::placeholder {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .campo input::placeholder.
+
+LINHA 0601: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0602:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0603:        Define a cor do placeholder.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0604:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0605:     color: #99939d;
+   ↳ É a cor do texto. Aqui foi colocado #99939d. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0606: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0607:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0608:        Mantém o placeholder completamente visível.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0609:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0610:     opacity: 1;
+   ↳ Controla a transparência. Aqui foi colocado 1. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0611: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0612: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0613: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0614: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0615:    INPUT SELECIONADO
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0616:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0617: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0618: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0619:    :focus é aplicado quando o usuário
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0620:    clica dentro do campo.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0621: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0622: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0623: .campo input:focus {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .campo input:focus.
+
+LINHA 0624: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0625:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0626:        Muda levemente a cor do fundo.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0627:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0628:     background-color: #eeecec;
+   ↳ É a cor do fundo. Aqui foi colocado #eeecec. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0629: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0630:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0631:        Cria uma pequena borda roxa ao redor do campo.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0632:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0633:     outline: 1px solid #70439b;
+   ↳ É uma linha de destaque em volta do elemento. Aqui foi colocado 1px solid #70439b. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0634: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0635: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0636: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0637: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0638:    LINHA DIVISÓRIA
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0639:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0640: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0641: .separador {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .separador.
+
+LINHA 0642: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0643:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0644:        Ocupa toda a largura.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0645:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0646:     width: 100%;
+   ↳ É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0647: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0648:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0649:        Define uma altura de apenas 1px,
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0650:        criando uma linha fina.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0651:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0652:     height: 1px;
+   ↳ É a altura. Aqui foi colocado 1px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0653: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0654:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0655:        Define a cor da linha.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0656:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0657:     background-color: #eeeeee;
+   ↳ É a cor do fundo. Aqui foi colocado #eeeeee. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0658: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0659:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0660:        Define o espaço acima e abaixo da linha.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0661: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0662:        4px = acima
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0663:        0   = esquerda/direita
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0664:        17px = abaixo
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0665:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0666:     margin: 4px 0 17px;
+   ↳ É o espaço de fora da caixa, para afastar dos outros elementos. Aqui foi colocado 4px 0 17px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0667: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0668: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0669: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0670: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0671:    TÍTULO "PARÂMETROS FINANCEIROS INICIAIS"
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0672:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0673: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0674: .card h2 {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .card h2.
+
+LINHA 0675: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0676:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0677:        Define a cor cinza do subtítulo.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0678:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0679:     color: #77717d;
+   ↳ É a cor do texto. Aqui foi colocado #77717d. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0680: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0681:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0682:        Define o tamanho pequeno da fonte.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0683:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0684:     font-size: 7px;
+   ↳ É o tamanho das letras. Aqui foi colocado 7px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0685: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0686:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0687:        Deixa o texto em negrito.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0688:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0689:     font-weight: 700;
+   ↳ Controla se a letra fica normal ou mais grossa. Aqui foi colocado 700. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0690: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0691:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0692:        Aumenta um pouco o espaço entre as letras.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0693:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0694:     letter-spacing: 0.7px;
+   ↳ Ajusta o espaço entre as letras. Aqui foi colocado 0.7px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0695: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0696:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0697:        Cria espaço abaixo do título.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0698:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0699:     margin-bottom: 15px;
+   ↳ Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 15px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0700: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0701: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0702: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0703: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0704:    AVISO DE SEGURANÇA / LGPD
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0705:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0706: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0707: .aviso-seguranca {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .aviso-seguranca.
+
+LINHA 0708: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0709:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0710:        Ocupa toda a largura disponível.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0711:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0712:     width: 100%;
+   ↳ É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0713: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0714:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0715:        Define uma altura mínima para o aviso.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0716:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0717:     min-height: 33px;
+   ↳ Define a altura mínima. Aqui foi colocado 33px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0718: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0719:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0720:        Ativa o Flexbox.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0721:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0722:     display: flex;
+   ↳ Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado flex. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0723: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0724:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0725:        Centraliza verticalmente o ícone e o texto.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0726:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0727:     align-items: center;
+   ↳ Alinha os itens no outro eixo. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0728: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0729:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0730:        Define a cor de fundo do aviso.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0731:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0732:     background-color: #faf7f7;
+   ↳ É a cor do fundo. Aqui foi colocado #faf7f7. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0733: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0734:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0735:        Arredonda os cantos.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0736:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0737:     border-radius: 6px;
+   ↳ Arredonda os cantos. Aqui foi colocado 6px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0738: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0739:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0740:        Cria espaço interno.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0741: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0742:        7px = cima/baixo
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0743:        12px = esquerda/direita
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0744:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0745:     padding: 7px 12px;
+   ↳ É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 7px 12px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0746: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0747:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0748:        Cria espaço acima e abaixo do aviso.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0749:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0750:     margin: 3px 0 19px;
+   ↳ É o espaço de fora da caixa, para afastar dos outros elementos. Aqui foi colocado 3px 0 19px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0751: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0752: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0753: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0754: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0755:    ÍCONE DO AVISO
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0756:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0757: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0758: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0759:    ::before cria um elemento antes do conteúdo
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0760:    do aviso.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0761: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0762:    Aqui usamos isso para colocar o cadeado.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0763: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0764: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0765: .aviso-seguranca::before {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .aviso-seguranca::before.
+
+LINHA 0766: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0767:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0768:        Define o conteúdo que será inserido.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0769:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0770:     content: "🔒";
+   ↳ Controla a propriedade content desse elemento. Aqui foi colocado "🔒". Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0771: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0772:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0773:        Define o tamanho do emoji.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0774:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0775:     font-size: 11px;
+   ↳ É o tamanho das letras. Aqui foi colocado 11px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0776: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0777:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0778:        Cria espaço entre o cadeado e o texto.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0779:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0780:     margin-right: 10px;
+   ↳ Controla a propriedade margin-right desse elemento. Aqui foi colocado 10px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0781: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0782: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0783: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0784: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0785:    TEXTO DO AVISO
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0786:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0787: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0788: .aviso-seguranca p {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .aviso-seguranca p.
+
+LINHA 0789: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0790:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0791:        Remove a margem padrão do parágrafo.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0792:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0793:     margin: 0;
+   ↳ É o espaço de fora da caixa, para afastar dos outros elementos. Aqui foi colocado 0. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0794: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0795:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0796:        Define a cor do texto.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0797:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0798:     color: #89838d;
+   ↳ É a cor do texto. Aqui foi colocado #89838d. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0799: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0800:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0801:        Define o tamanho do texto.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0802:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0803:     font-size: 7.5px;
+   ↳ É o tamanho das letras. Aqui foi colocado 7.5px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0804: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0805:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0806:        Define o espaçamento entre as linhas.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0807:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0808:     line-height: 1.4;
+   ↳ É a altura de cada linha de texto. Aqui foi colocado 1.4. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0809: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0810: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0811: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0812: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0813:    BOTÃO CADASTRAR
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0814:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0815: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0816: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0817:    BOTÃO "CADASTRAR"
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0818:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0819: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0820: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0821:    Como agora o botão é um <a>,
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0822:    usamos display: flex para fazer o link
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0823:    ocupar o formato de um botão.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0824: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0825: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0826: .botao-cadastrar {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .botao-cadastrar.
+
+LINHA 0827: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0828:     /* Faz o link ocupar toda a largura disponível */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0829:     width: 100%;
+   ↳ É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0830: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0831:     /* Define a altura do botão */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0832:     height: 38px;
+   ↳ É a altura. Aqui foi colocado 38px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0833: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0834:     /* Transforma o link em um elemento flexível */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0835:     display: flex;
+   ↳ Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado flex. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0836: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0837:     /* Centraliza o texto verticalmente */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0838:     align-items: center;
+   ↳ Alinha os itens no outro eixo. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0839: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0840:     /* Centraliza o texto horizontalmente */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0841:     justify-content: center;
+   ↳ Organiza os itens no eixo principal, tipo centralizar ou separar. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0842: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0843:     /* Define o espaço entre "Cadastrar" e a seta */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0844:     gap: 13px;
+   ↳ É a distância entre os elementos. Aqui foi colocado 13px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0845: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0846:     /* Remove o sublinhado padrão dos links */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0847:     text-decoration: none;
+   ↳ Coloca ou tira decoração do texto, como sublinhado. Aqui foi colocado none. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0848: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0849:     /* Define a cor do fundo */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0850:     background-color: #00683f;
+   ↳ É a cor do fundo. Aqui foi colocado #00683f. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0851: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0852:     /* Define a cor do texto */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0853:     color: #ffffff;
+   ↳ É a cor do texto. Aqui foi colocado #ffffff. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0854: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0855:     /* Define a fonte */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0856:     font-family: 'Inter', sans-serif;
+   ↳ Escolhe a fonte das letras. Aqui foi colocado 'Inter', sans-serif. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0857: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0858:     /* Define o tamanho do texto */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0859:     font-size: 10px;
+   ↳ É o tamanho das letras. Aqui foi colocado 10px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0860: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0861:     /* Deixa o texto em negrito */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0862:     font-weight: 700;
+   ↳ Controla se a letra fica normal ou mais grossa. Aqui foi colocado 700. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0863: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0864:     /* Arredonda os cantos */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0865:     border-radius: 6px;
+   ↳ Arredonda os cantos. Aqui foi colocado 6px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0866: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0867:     /* Cria uma pequena sombra */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0868:     box-shadow: 0 4px 8px rgba(0, 104, 63, 0.18);
+   ↳ Adiciona uma sombra. Aqui foi colocado 0 4px 8px rgba(0, 104, 63, 0.18). Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0869: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0870:     /* Faz a mudança de cor ser suave */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0871:     transition: 0.2s ease;
+   ↳ Faz mudanças de estilo acontecerem suavemente. Aqui foi colocado 0.2s ease. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0872: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0873:     /* Faz o cursor virar uma mão */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0874:     cursor: pointer;
+   ↳ Muda o desenho do cursor ao passar em cima. Aqui foi colocado pointer. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0875: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0876: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0877: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0878: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0879:    EFEITO AO PASSAR O MOUSE
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0880:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0881: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0882: .botao-cadastrar:hover {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .botao-cadastrar:hover.
+
+LINHA 0883: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0884:     /* Escurece o botão */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0885:     background-color: #005735;
+   ↳ É a cor do fundo. Aqui foi colocado #005735. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0886: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0887:     /* Remove qualquer sublinhado do link */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0888:     text-decoration: none;
+   ↳ Coloca ou tira decoração do texto, como sublinhado. Aqui foi colocado none. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0889: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0890:     /* Move o botão 1px para cima */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0891:     transform: translateY(-1px);
+   ↳ Move, gira ou aumenta um elemento visualmente. Aqui foi colocado translateY(-1px). Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0892: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0893: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0894: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0895:    TEXTO "JÁ POSSUI UMA CONTA?"
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0896:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0897: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0898: .possui-conta {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .possui-conta.
+
+LINHA 0899: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0900:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0901:        Centraliza o texto.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0902:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0903:     text-align: center;
+   ↳ Alinha o texto. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0904: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0905:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0906:        Define a cor cinza.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0907:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0908:     color: #99939d;
+   ↳ É a cor do texto. Aqui foi colocado #99939d. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0909: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0910:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0911:        Define o tamanho da fonte.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0912:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0913:     font-size: 8px;
+   ↳ É o tamanho das letras. Aqui foi colocado 8px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0914: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0915:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0916:        Cria espaço acima do texto.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0917: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0918:        Isso separa o texto do botão.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0919:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0920:     margin-top: 14px;
+   ↳ Controla a propriedade margin-top desse elemento. Aqui foi colocado 14px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0921: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0922:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0923:        Remove espaço desnecessário abaixo.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0924:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0925:     margin-bottom: 0;
+   ↳ Controla a propriedade margin-bottom desse elemento. Aqui foi colocado 0. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0926: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0927: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0928: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0929: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0930:    LINK "ENTRAR"
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0931:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0932: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0933: .possui-conta a {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .possui-conta a.
+
+LINHA 0934: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0935:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0936:        Define a cor roxa do link.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0937:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0938:     color: #654096;
+   ↳ É a cor do texto. Aqui foi colocado #654096. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0939: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0940:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0941:        Deixa o link em negrito.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0942:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0943:     font-weight: 700;
+   ↳ Controla se a letra fica normal ou mais grossa. Aqui foi colocado 700. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0944: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0945:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0946:        Remove o sublinhado padrão do link.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0947:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0948:     text-decoration: none;
+   ↳ Coloca ou tira decoração do texto, como sublinhado. Aqui foi colocado none. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0949: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0950: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0951: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0952: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0953:    HOVER DO LINK
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0954:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0955: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0956: .possui-conta a:hover {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .possui-conta a:hover.
+
+LINHA 0957: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0958:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0959:        Coloca o sublinhado quando
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0960:        o mouse passa sobre o link.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0961:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0962:     text-decoration: underline;
+   ↳ Coloca ou tira decoração do texto, como sublinhado. Aqui foi colocado underline. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0963: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 0964: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0965: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0966: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0967:    RODAPÉ
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0968:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0969: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0970: footer {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor footer.
+
+LINHA 0971: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0972:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0973:        Ocupa toda a largura disponível.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0974:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0975:     width: 100%;
+   ↳ É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0976: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0977:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0978:        Mantém o mesmo tamanho máximo do card.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0979:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0980:     max-width: 795px;
+   ↳ Limita até onde a largura pode crescer. Aqui foi colocado 795px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0981: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0982:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0983:        Ativa o Flexbox.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0984:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0985:     display: flex;
+   ↳ Escolhe como os elementos vão aparecer e se organizar. Aqui foi colocado flex. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0986: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0987:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0988:        Centraliza os elementos verticalmente.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0989:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0990:     align-items: center;
+   ↳ Alinha os itens no outro eixo. Aqui foi colocado center. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0991: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0992:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0993:        Coloca um item no início e outro no final.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0994:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0995:     justify-content: space-between;
+   ↳ Organiza os itens no eixo principal, tipo centralizar ou separar. Aqui foi colocado space-between. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 0996: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0997:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 0998:        Cria espaço entre o card e o footer.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 0999:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1000:     margin-top: 10px;
+   ↳ Controla a propriedade margin-top desse elemento. Aqui foi colocado 10px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1001: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1002:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1003:        Cria um pequeno espaço nas laterais.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1004:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1005:     padding: 0 5px;
+   ↳ É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 0 5px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1006: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1007:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1008:        Define a cor dos textos do footer.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1009:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1010:     color: #aaa4ad;
+   ↳ É a cor do texto. Aqui foi colocado #aaa4ad. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1011: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1012:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1013:        Define o tamanho da fonte.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1014:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1015:     font-size: 7px;
+   ↳ É o tamanho das letras. Aqui foi colocado 7px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1016: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 1017: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1018: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1019: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1020:    RESPONSIVIDADE — TABLETS
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1021:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1022: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1023: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1024:    Essa regra é aplicada quando a tela
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1025:    tiver no máximo 700px de largura.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1026: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1027: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1028: @media (max-width: 700px) {
+   ↳ Essa regra é para adaptar a aparência em determinados tamanhos de tela, principalmente celular.
+
+LINHA 1029: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1030:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1031:        Diminui o espaço externo da página.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1032:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1033:     .pagina {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .pagina.
+
+LINHA 1034:         padding: 25px 15px;
+   ↳ É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 25px 15px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1035:     }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 1036: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1037:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1038:        Diminui o espaço interno do card.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1039:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1040:     .card {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .card.
+
+LINHA 1041:         padding: 27px 22px 23px;
+   ↳ É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 27px 22px 23px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1042:     }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 1043: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 1044: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1045: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1046: /* =========================================================
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1047:    RESPONSIVIDADE — CELULARES
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1048:    ========================================================= */
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1049: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1050: /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1051:    Essa regra é aplicada em telas de
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1052:    até 500px de largura.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1053: */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1054: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1055: @media (max-width: 500px) {
+   ↳ Essa regra é para adaptar a aparência em determinados tamanhos de tela, principalmente celular.
+
+LINHA 1056: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1057:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1058:        Diminui o espaço nas laterais.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1059:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1060:     .pagina {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .pagina.
+
+LINHA 1061:         padding: 20px 12px;
+   ↳ É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 20px 12px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1062: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1063:         /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1064:            No celular, começa o conteúdo
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1065:            mais próximo do topo.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1066:         */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1067:         justify-content: flex-start;
+   ↳ Organiza os itens no eixo principal, tipo centralizar ou separar. Aqui foi colocado flex-start. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1068:     }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 1069: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1070:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1071:        Diminui o espaço interno do card.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1072:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1073:     .card {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .card.
+
+LINHA 1074:         padding: 24px 17px 22px;
+   ↳ É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 24px 17px 22px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1075: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1076:         /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1077:            Diminui um pouco o arredondamento.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1078:         */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1079:         border-radius: 11px;
+   ↳ Arredonda os cantos. Aqui foi colocado 11px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1080:     }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 1081: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1082:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1083:        No celular, os campos que estavam
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1084:        lado a lado passam a ficar um abaixo do outro.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1085: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1086:        Isso evita que os inputs fiquem apertados.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1087:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1088:     .linha {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .linha.
+
+LINHA 1089:         flex-direction: column;
+   ↳ Define se os itens flex ficam em linha ou coluna. Aqui foi colocado column. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1090: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1091:         /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1092:            Remove o espaço horizontal entre eles.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1093:         */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1094:         gap: 0;
+   ↳ É a distância entre os elementos. Aqui foi colocado 0. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1095:     }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 1096: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1097:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1098:        Cada campo volta a ocupar
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1099:        toda a largura.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1100:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1101:     .linha .campo {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .linha .campo.
+
+LINHA 1102:         width: 100%;
+   ↳ É a largura. Aqui foi colocado 100%. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1103:     }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 1104: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1105:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1106:        Diminui o tamanho do título.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1107:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1108:     .card h1 {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .card h1.
+
+LINHA 1109:         font-size: 19px;
+   ↳ É o tamanho das letras. Aqui foi colocado 19px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1110:     }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 1111: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1112:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1113:        Diminui o tamanho da descrição.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1114:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1115:     .descricao {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .descricao.
+
+LINHA 1116:         font-size: 8px;
+   ↳ É o tamanho das letras. Aqui foi colocado 8px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1117:     }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 1118: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1119:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1120:        Aumenta um pouco a altura dos inputs
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1121:        para facilitar o uso no celular.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1122:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1123:     .campo input {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .campo input.
+
+LINHA 1124:         height: 36px;
+   ↳ É a altura. Aqui foi colocado 36px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1125:     }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 1126: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1127:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1128:        Aumenta um pouco a altura do botão
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1129:        para facilitar o toque.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1130:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1131:     .botao-cadastrar {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor .botao-cadastrar.
+
+LINHA 1132:         height: 38px;
+   ↳ É a altura. Aqui foi colocado 38px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1133:     }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 1134: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1135:     /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1136:        Diminui o tamanho do texto do footer.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1137:     */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1138:     footer {
+   ↳ Esse bloco vale para os elementos que combinam com o seletor footer.
+
+LINHA 1139:         font-size: 6px;
+   ↳ É o tamanho das letras. Aqui foi colocado 6px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1140: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 1141:         /*
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1142:            Diminui o espaçamento lateral.
+   ↳ Essa parte faz parte da regra de estilo escrita aqui.
+
+LINHA 1143:         */
+   ↳ Esse trecho já é um comentário no arquivo original; não muda a página.
+
+LINHA 1144:         padding: 0 3px;
+   ↳ É o espaço de dentro da caixa, entre o conteúdo e as bordas. Aqui foi colocado 0 3px. Se mudar esse valor, muda esse detalhe na tela.
+
+LINHA 1145:     }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.
+
+LINHA 1146: }
+   ↳ Aqui acaba o bloco de estilos que começou lá em cima.

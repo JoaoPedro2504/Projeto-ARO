@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!-- É o começo da página HTML; lang indica o idioma. -->
+<html lang="pt-br">
+
+<!-- É a parte das configurações, que não aparece como conteúdo principal. -->
+<head>
+    <!-- Passa uma configuração para o navegador, como caracteres e adaptação ao celular. -->
+    <meta charset="UTF-8">
+    <!-- Passa uma configuração para o navegador, como caracteres e adaptação ao celular; name é a chave que chega no request.form do Flask. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARO - Seu futuro financeiro</title>
+    <!-- Liga esse HTML ao CSS externo. -->
+    <link rel="stylesheet" href="static/css/landing.css">
+<!-- Fecha o elemento head que foi aberto antes. -->
+</head>
+
+<!-- Aqui começa o que aparece na tela. -->
+<body>
+
+    <!-- CABEÇALHO -->
+    <!-- É o topo de uma área ou página. -->
+    <header>
+
+        <!-- MENU DE NAVEGAÇÃO -->
+        <!-- É a área de links de navegação. -->
+        <nav>
+            <h1>ARO</h1>
+
+            <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+            <div class="menu">
+                <a href="#inicio">Para você</a>
+                <a href="#solucoes">Soluções</a>
+                <a href="#seguranca">Segurança</a>
+                <a href="#praticidade">Praticidade</a>
+                <a href="/cadastro" class="entrar">Entrar</a>
+            <!-- Fecha o elemento div que foi aberto antes. -->
+            </div>
+        <!-- Fecha o elemento nav que foi aberto antes. -->
+        </nav>
+
+        <!-- AVISO DO PROJETO -->
+        <!-- É um parágrafo de texto; class liga ele aos estilos do CSS. -->
+        <p class="aviso">
+
+            AMBIENTE ACADÊMICO - PROJETO EXPERIMENTAL 2026
+        <!-- Fecha o elemento p que foi aberto antes. -->
+        </p>
+
+    <!-- Fecha o elemento header que foi aberto antes. -->
+    </header>
+
+    <!-- Marca a parte principal da tela. -->
+    <main>
+
+        <!-- INÍCIO -->
+        <!-- Separa uma área importante da página; class liga ele aos estilos do CSS; id identifica esse elemento. -->
+        <section class="inicio" id="inicio">
+
+            <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+            <div class="conteudo">
+
+                <!-- Marca um pedacinho de texto para formatar; class liga ele aos estilos do CSS. -->
+                <span class="etiqueta">
+
+                    Conta para empreendedores
+                <!-- Fecha o elemento span que foi aberto antes. -->
+                </span>
+
+                <!-- É um subtítulo da página. -->
+                <h2>
+
+                    Mais controle para o seu
+
+                    futuro financeiro.
+                <!-- Fecha o elemento h2 que foi aberto antes. -->
+                </h2>
+
+                <!-- É um parágrafo de texto. -->
+                <p>
+
+                    No ARO, você acompanha seus gastos,
+
+                    organiza suas finanças e conquista
+
+                    seus objetivos com segurança e praticidade.
+                <!-- Fecha o elemento p que foi aberto antes. -->
+                </p>
+
+                <a href="/cadastro" class="botao">Login →</a>
+
+            <!-- Fecha o elemento div que foi aberto antes. -->
+            </div>
+
+            <!-- IMAGEM PRINCIPAL -->
+            <!-- Mostra uma imagem; src diz onde ela está. -->
+            <img src="img/notebook.png" alt="Sistema ARO">
+
+        <!-- Fecha o elemento section que foi aberto antes. -->
+        </section>
+
+
+        <!-- SOLUÇÕES -->
+        <!-- Separa uma área importante da página; class liga ele aos estilos do CSS; id identifica esse elemento. -->
+        <section class="solucoes" id="solucoes">
+
+            <p>Por que escolher o ARO?</p>
+
+            <!-- É um subtítulo da página. -->
+            <h2>
+
+                Tudo o que você precisa para gerenciar<br>
+
+                seu dinheiro, em um só lugar.
+            <!-- Fecha o elemento h2 que foi aberto antes. -->
+            </h2>
+
+            <!-- É um parágrafo de texto. -->
+            <p>
+
+                Oferecemos soluções simples e seguras
+
+                para você ter mais liberdade e tranquilidade
+
+                no seu dia a dia.
+            <!-- Fecha o elemento p que foi aberto antes. -->
+            </p>
+
+            <!-- CARDS -->
+            <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+            <div class="cards">
+
+                <!-- CONTA DIGITAL -->
+                <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+                <div class="card">
+
+                    <!-- Mostra uma imagem; src diz onde ela está; class liga ele aos estilos do CSS. -->
+                    <img src="img/icone-celular.png" alt="Conta digital" class="icone-img">
+
+                    <h3>Conta digital completa</h3>
+
+                    <!-- É um parágrafo de texto. -->
+                    <p>
+
+                        Abra sua conta em minutos e
+
+                        tenha tudo pelo celular.
+                    <!-- Fecha o elemento p que foi aberto antes. -->
+                    </p>
+
+                <!-- Fecha o elemento div que foi aberto antes. -->
+                </div>
+
+                <!-- CARTÃO -->
+                <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+                <div class="card">
+
+                    <!-- Mostra uma imagem; src diz onde ela está; class liga ele aos estilos do CSS. -->
+                    <img src="img/icone-cartao.png" alt="Cartão" class="icone-img">
+
+                    <h3>Cartão sem anuidade</h3>
+
+                    <!-- É um parágrafo de texto. -->
+                    <p>
+
+                        Mais praticidade e liberdade
+
+                        para o seu dia a dia.
+                    <!-- Fecha o elemento p que foi aberto antes. -->
+                    </p>
+
+                <!-- Fecha o elemento div que foi aberto antes. -->
+                </div>
+
+                <!-- SEGURANÇA -->
+                <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+                <div class="card">
+
+                    <!-- Mostra uma imagem; src diz onde ela está; class liga ele aos estilos do CSS. -->
+                    <img src="img/icone-seguranca.png" alt="Segurança" class="icone-img">
+
+                    <h3>Segurança avançada</h3>
+
+                    <!-- É um parágrafo de texto. -->
+                    <p>
+
+                        Seus dados e seu dinheiro
+
+                        sempre protegidos.
+                    <!-- Fecha o elemento p que foi aberto antes. -->
+                    </p>
+
+                <!-- Fecha o elemento div que foi aberto antes. -->
+                </div>
+
+                <!-- SUPORTE -->
+                <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+                <div class="card">
+
+                    <!-- Mostra uma imagem; src diz onde ela está; class liga ele aos estilos do CSS. -->
+                    <img src="img/icone-suporte.png" alt="Suporte" class="icone-img">
+
+                    <h3>Suporte 24/7</h3>
+
+                    <!-- É um parágrafo de texto. -->
+                    <p>
+
+                        Estamos sempre aqui
+
+                        para te ajudar.
+                    <!-- Fecha o elemento p que foi aberto antes. -->
+                    </p>
+
+                <!-- Fecha o elemento div que foi aberto antes. -->
+                </div>
+
+            <!-- Fecha o elemento div que foi aberto antes. -->
+            </div>
+
+        <!-- Fecha o elemento section que foi aberto antes. -->
+        </section>
+
+
+        <!-- SEGURANÇA -->
+        <!-- Separa uma área importante da página; class liga ele aos estilos do CSS; id identifica esse elemento. -->
+        <section class="seguranca" id="seguranca">
+
+            <!-- IMAGEM DE SEGURANÇA -->
+            <!-- Mostra uma imagem; src diz onde ela está. -->
+            <img src="img/seguranca.png" alt="Segurança ARO">
+
+            <!-- Cria uma caixa para organizar outras coisas e aplicar CSS. -->
+            <div>
+
+                <h4>SEGURANÇA</h4>
+
+                <!-- É um subtítulo da página. -->
+                <h2>
+
+                    Seus dados e seu dinheiro
+
+                    sempre protegidos.
+                <!-- Fecha o elemento h2 que foi aberto antes. -->
+                </h2>
+
+                <!-- É um parágrafo de texto. -->
+                <p>
+
+                    Utilizamos as mais modernas tecnologias
+
+                    de segurança para garantir que suas
+
+                    informações e transações estejam sempre
+
+                    protegidas, 24 horas por dia.
+                <!-- Fecha o elemento p que foi aberto antes. -->
+                </p>
+
+            <!-- Fecha o elemento div que foi aberto antes. -->
+            </div>
+
+        <!-- Fecha o elemento section que foi aberto antes. -->
+        </section>
+
+
+        <!-- PRATICIDADE -->
+        <!-- Separa uma área importante da página; class liga ele aos estilos do CSS; id identifica esse elemento. -->
+        <section class="praticidade" id="praticidade">
+
+            <!-- Cria uma caixa para organizar outras coisas e aplicar CSS. -->
+            <div>
+
+                <h4>PRATICIDADE</h4>
+
+                <!-- É um subtítulo da página. -->
+                <h2>
+
+                    Tudo na palma da sua mão.
+                <!-- Fecha o elemento h2 que foi aberto antes. -->
+                </h2>
+
+                <!-- É um parágrafo de texto. -->
+                <p>
+
+                    Acesse sua conta, faça transferências,
+
+                    pague contas e acompanhe seus gastos,
+
+                    de onde estiver.
+                <!-- Fecha o elemento p que foi aberto antes. -->
+                </p>
+
+            <!-- Fecha o elemento div que foi aberto antes. -->
+            </div>
+
+            <!-- IMAGEM DO APLICATIVO -->
+            <!-- Mostra uma imagem; src diz onde ela está. -->
+            <img src="img/celular.png" alt="Aplicativo ARO">
+
+        <!-- Fecha o elemento section que foi aberto antes. -->
+        </section>
+
+
+        <!-- CHAMADA FINAL -->
+        <!-- Separa uma área importante da página; class liga ele aos estilos do CSS. -->
+        <section class="final">
+
+            <!-- Cria uma caixa para organizar outras coisas e aplicar CSS. -->
+            <div>
+
+                <!-- É um subtítulo da página. -->
+                <h2>
+
+                    PRONTO PARA LEVAR SEU
+
+                    DINHEIRO MAIS LONGE?
+                <!-- Fecha o elemento h2 que foi aberto antes. -->
+                </h2>
+
+                <!-- É um parágrafo de texto. -->
+                <p>
+
+                    Abra sua conta para empreendedores
+
+                    e comece a fazer suas finanças com o ARO.
+                <!-- Fecha o elemento p que foi aberto antes. -->
+                </p>
+
+            <!-- Fecha o elemento div que foi aberto antes. -->
+            </div>
+
+            <!-- Cria um link clicável para outra página; class liga ele aos estilos do CSS. -->
+            <a href="/cadastro" class="botao-final">
+
+                Começar agora →
+            <!-- Fecha o elemento a que foi aberto antes. -->
+            </a>
+
+        <!-- Fecha o elemento section que foi aberto antes. -->
+        </section>
+
+    <!-- Fecha o elemento main que foi aberto antes. -->
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <!-- É o rodapé. -->
+    <footer>
+
+        <!-- LINKS DO RODAPÉ -->
+        <!-- Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS. -->
+        <div class="links">
+
+            <a href="#inicio">Para você</a>
+            <a href="#solucoes">Soluções</a>
+            <a href="#seguranca">Segurança</a>
+            <a href="#praticidade">Praticidade</a>
+
+        <!-- Fecha o elemento div que foi aberto antes. -->
+        </div>
+
+        <!-- INFORMAÇÕES -->
+        <!-- É um parágrafo de texto. -->
+        <p>
+
+            Termos de uso | Política de privacidade
+        <!-- Fecha o elemento p que foi aberto antes. -->
+        </p>
+
+        <!-- DIREITOS AUTORAIS -->
+        <!-- Esse elemento HTML h4 monta uma parte da página. -->
+        <h4>
+
+            © 2026 ARO. Todos os direitos reservados.
+        <!-- Fecha o elemento h4 que foi aberto antes. -->
+        </h4>
+
+    <!-- Fecha o elemento footer que foi aberto antes. -->
+    </footer>
+
+<!-- Fecha o elemento body que foi aberto antes. -->
+</body>
+
+<!-- Fecha o elemento html que foi aberto antes. -->
+</html>

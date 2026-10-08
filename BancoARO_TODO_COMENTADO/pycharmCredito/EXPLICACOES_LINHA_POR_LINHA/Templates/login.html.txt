@@ -1,0 +1,600 @@
+# Explicação do arquivo Templates/login.html
+
+Aqui está o código original, linha por linha, com a explicação do lado. O projeto em si também recebe comentários onde não atrapalha.
+
+LINHA 0001: <!DOCTYPE html>
+   ↳ Isso avisa ao navegador que essa página usa HTML moderno.
+
+LINHA 0002: <html lang="pt-BR">
+   ↳ É o começo da página HTML; lang indica o idioma.
+
+LINHA 0003: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0004: <head>
+   ↳ É a parte das configurações, que não aparece como conteúdo principal.
+
+LINHA 0005: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0006:     <!-- Define a codificação de caracteres da página -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0007:     <meta charset="UTF-8">
+   ↳ Passa uma configuração para o navegador, como caracteres e adaptação ao celular.
+
+LINHA 0008: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0009:     <!-- Faz a página se adaptar a celulares e tablets -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0010:     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   ↳ Passa uma configuração para o navegador, como caracteres e adaptação ao celular; name é a chave que chega no request.form do Flask.
+
+LINHA 0011: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0012:     <!-- Nome que aparece na aba do navegador -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0013:     <title>Entrar | ARO</title>
+   ↳ É o nome que aparece na aba do navegador.
+
+LINHA 0014: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0015:     <!-- Conecta o HTML ao arquivo CSS -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0016:     <link rel="stylesheet" href="static/css/login.css">
+   ↳ Liga esse HTML ao CSS externo.
+
+LINHA 0017: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0018: </head>
+   ↳ Fecha o elemento head que foi aberto antes.
+
+LINHA 0019: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0020: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0021: <body>
+   ↳ Aqui começa o que aparece na tela.
+
+LINHA 0022: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0023:     <!-- =====================================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0024:          CONTAINER PRINCIPAL
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0025:          Contém o logo e o formulário de login
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0026:          ===================================================== -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0027: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0028:     <main class="pagina-login">
+   ↳ Marca a parte principal da tela; class liga ele aos estilos do CSS.
+
+LINHA 0029: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0030: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0031:         <!-- =================================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0032:              ÁREA DO LOGO
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0033:              ================================================= -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0034: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0035:         <section class="area-logo">
+   ↳ Separa uma área importante da página; class liga ele aos estilos do CSS.
+
+LINHA 0036: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0037:             <!--
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0038:                 Imagem do logo ARO.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0039: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0040:                 O arquivo deve estar em:
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0041:                 static/img/logo-aro.png
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0042:             -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0043: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0044:             <img src="{{ url_for('static', filename='img/logo-aro.png') }}" alt="Logo ARO" class="logo-aro">
+   ↳ Os dois pares de chaves pedem para o Flask/Jinja colocar aqui um valor vindo do Python ou montar uma rota.
+
+LINHA 0045: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0046:         </section>
+   ↳ Fecha o elemento section que foi aberto antes.
+
+LINHA 0047: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0048: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0049:         <!-- =================================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0050:              ÁREA DO LOGIN
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0051:              ================================================= -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0052: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0053:         <section class="area-login">
+   ↳ Separa uma área importante da página; class liga ele aos estilos do CSS.
+
+LINHA 0054: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0055: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0056:             <!-- =============================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0057:                  CARD DO LOGIN
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0058:                  ============================================= -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0059: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0060:             <div class="card-login">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0061: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0062: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0063:                 <!-- =========================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0064:                      CABEÇALHO
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0065:                      ========================================= -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0066: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0067:                 <div class="cabecalho-login">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0068: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0069:                     <!-- Título principal -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0070:                     <h1>Entre na sua conta</h1>
+   ↳ É o título mais importante da página.
+
+LINHA 0071: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0072:                     <!-- Texto explicativo -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0073:                     <p>
+   ↳ É um parágrafo de texto.
+
+LINHA 0074:                         Informe seus dados de acesso abaixo para prosseguir.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0075:                     </p>
+   ↳ Fecha o elemento p que foi aberto antes.
+
+LINHA 0076: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0077:                 </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0078: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0079: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0080:                 <!-- =========================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0081:                      FORMULÁRIO
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0082:                      ========================================= -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0083: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0084:                 <form action="/login" method="POST" class="form-login">
+   ↳ Cria o formulário que envia dados para o Flask; class liga ele aos estilos do CSS.
+
+LINHA 0085: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0086: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0087:                     <!-- =====================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0088:                          CAMPO DE E-MAIL
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0089:                          ===================================== -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0090: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0091:                     <div class="campo">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0092: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0093:                         <label for="email">
+   ↳ É o nome que explica o campo de digitação.
+
+LINHA 0094:                             E-mail
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0095:                         </label>
+   ↳ Fecha o elemento label que foi aberto antes.
+
+LINHA 0096: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0097:                         <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+   ↳ Cria um campo para a pessoa preencher; id identifica esse elemento; name é a chave que chega no request.form do Flask.
+
+LINHA 0098: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0099:                     </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0100: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0101: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0102:                     <!-- =====================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0103:                          CAMPO DE SENHA
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0104:                          ===================================== -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0105: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0106:                     <div class="campo">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0107: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0108:                         <label for="senha">
+   ↳ É o nome que explica o campo de digitação.
+
+LINHA 0109:                             Senha
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0110:                         </label>
+   ↳ Fecha o elemento label que foi aberto antes.
+
+LINHA 0111: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0112:                         <input type="password" id="senha" name="senha" placeholder="••••••••" required>
+   ↳ Cria um campo para a pessoa preencher; id identifica esse elemento; name é a chave que chega no request.form do Flask.
+
+LINHA 0113: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0114:                     </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0115: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0116:                     <!-- =====================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0117:                          MENSAGENS DO FLASK
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0118:                          ===================================== -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0119: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0120:                     {% with mensagens = get_flashed_messages() %}
+   ↳ Esse comando do Jinja/Flask controla o que aparece na página, como condição, repetição ou mensagens.
+
+LINHA 0121: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0122:                     {% if mensagens %}
+   ↳ Esse comando do Jinja/Flask controla o que aparece na página, como condição, repetição ou mensagens.
+
+LINHA 0123: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0124:                     <div class="mensagens">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0125: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0126:                         {% for mensagem in mensagens %}
+   ↳ Esse comando do Jinja/Flask controla o que aparece na página, como condição, repetição ou mensagens.
+
+LINHA 0127: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0128:                         <p>{{ mensagem }}</p>
+   ↳ Os dois pares de chaves pedem para o Flask/Jinja colocar aqui um valor vindo do Python ou montar uma rota.
+
+LINHA 0129: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0130:                         {% endfor %}
+   ↳ Esse comando do Jinja/Flask controla o que aparece na página, como condição, repetição ou mensagens.
+
+LINHA 0131: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0132:                     </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0133: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0134:                     {% endif %}
+   ↳ Esse comando do Jinja/Flask controla o que aparece na página, como condição, repetição ou mensagens.
+
+LINHA 0135: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0136:                     {% endwith %}
+   ↳ Esse comando do Jinja/Flask controla o que aparece na página, como condição, repetição ou mensagens.
+
+LINHA 0137: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0138: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0139:                     <!-- =====================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0140:                          BOTÃO DE LOGIN
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0141:                          ===================================== -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0142: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0143:                     <button type="submit" class="botao-login">
+   ↳ Cria um botão; type define o que ele faz; class liga ele aos estilos do CSS.
+
+LINHA 0144:                         ENTRAR NA MINHA CONTA
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0145:                     </button>
+   ↳ Fecha o elemento button que foi aberto antes.
+
+LINHA 0146: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0147: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0148:                 </form>
+   ↳ Fecha o elemento form que foi aberto antes.
+
+LINHA 0149: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0150: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0151:             </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0152: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0153: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0154:             <!-- =============================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0155:                  CRIAR CONTA
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0156:                  ============================================= -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0157: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0158:             <div class="criar-conta">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0159: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0160:                 <p>
+   ↳ É um parágrafo de texto.
+
+LINHA 0161:                     Ainda não possui uma conta?
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0162:                 </p>
+   ↳ Fecha o elemento p que foi aberto antes.
+
+LINHA 0163: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0164:                 <!--
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0165:                     Leva o usuário para a página de cadastro.
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0166:                 -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0167: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0168:                 <a href="{{ url_for('cadastro') }}">
+   ↳ Os dois pares de chaves pedem para o Flask/Jinja colocar aqui um valor vindo do Python ou montar uma rota.
+
+LINHA 0169:                     Criar uma conta
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0170:                 </a>
+   ↳ Fecha o elemento a que foi aberto antes.
+
+LINHA 0171: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0172:             </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0173: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0174: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0175:             <!-- =============================================
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0176:                  AVISO DE SEGURANÇA
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0177:                  ============================================= -->
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0178: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0179:             <div class="seguranca">
+   ↳ Cria uma caixa para organizar outras coisas e aplicar CSS; class liga ele aos estilos do CSS.
+
+LINHA 0180: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0181:                 <!-- Ícone de cadeado -->
+   ↳ Esse é um comentário no HTML; serve só para explicar, não aparece como conteúdo.
+
+LINHA 0182:                 <span class="cadeado">♙</span>
+   ↳ Marca um pedacinho de texto para formatar; class liga ele aos estilos do CSS.
+
+LINHA 0183: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0184:                 <span>
+   ↳ Marca um pedacinho de texto para formatar.
+
+LINHA 0185:                     Ambiente seguro com criptografia 256-bit
+   ↳ Esse é o texto ou a continuação de um elemento que aparece na página.
+
+LINHA 0186:                 </span>
+   ↳ Fecha o elemento span que foi aberto antes.
+
+LINHA 0187: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0188:             </div>
+   ↳ Fecha o elemento div que foi aberto antes.
+
+LINHA 0189: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0190: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0191:         </section>
+   ↳ Fecha o elemento section que foi aberto antes.
+
+LINHA 0192: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0193: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0194:     </main>
+   ↳ Fecha o elemento main que foi aberto antes.
+
+LINHA 0195: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0196: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0197: </body>
+   ↳ Fecha o elemento body que foi aberto antes.
+
+LINHA 0198: 
+   ↳ Linha vazia: só separa os blocos para ficar mais fácil de ler.
+
+LINHA 0199: </html>
+   ↳ Fecha o elemento html que foi aberto antes.
